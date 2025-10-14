@@ -1,0 +1,18 @@
+@import "tailwindcss";
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.masked-img {
+	mask-image: url("/hero/grand-theft.svg");
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: 2600%;
+}
+.under-img {
+	position: sticky;
+	height: 150%;
+	scale: 1.1;
+}
