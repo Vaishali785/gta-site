@@ -5,14 +5,42 @@
 	box-sizing: border-box;
 }
 
+#hero {
+	background: linear-gradient(to bottom, black 90%, transparent 100%);
+	/* position: fixed;
+	left: 50%;
+	top: 50%; */
+	/* transform: translate(-50%, -50%); */
+}
+
 .masked-img {
 	mask-image: url("/hero/grand-theft.svg");
 	mask-repeat: no-repeat;
-	mask-position: center;
-	mask-size: 2600%;
+	mask-position: center 18.7%;
+	mask-size: 3500%;
 }
 .under-img {
 	position: sticky;
-	height: 150%;
+	/* top: 0;
+	bottom: 0; */
+	height: 100vh;
+	width: 100vw;
 	scale: 1.1;
+}
+.vi-gradient-bg {
+	background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546);
+}
+
+.gradient-text {
+	background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546);
+	/* background: radial-gradient(
+		circle at 50% 120vh,
+		rgb(255, 212, 128) 0vh,
+		rgb(234, 67, 116) 50vh,
+		rgb(117, 32, 102) 90vh,
+		rgba(32, 31, 66, 0) 119.275vh
+	); */
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
 }
