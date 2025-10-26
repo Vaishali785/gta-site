@@ -5,7 +5,6 @@ import React, { useRef } from "react"
 
 const HeroScreen = ({ zIndex }) => {
 	const heroRef = useRef(null)
-	// let split = SplitText.create("#comingSoonContent div")
 	useGSAP(() => {
 		ScrollTrigger.normalizeScroll(true)
 		const maskTimeline = gsap.timeline({})
@@ -26,9 +25,6 @@ const HeroScreen = ({ zIndex }) => {
 
 				if (progress > 0.8 && direction == 1) {
 					heroRef.current.style.background = `linear-gradient(to bottom, black ${bgVal}%, transparent ${bgTransVal}%)` // this is required otherwise with simple bg property gsap converts black to rgba() and keep changing the opacity value with color stop
-					// gsap.to("#hero", {
-					// 	opacity: 0.2,
-					// })
 				}
 				if (progress > 0.8 && direction == 1 && !hasComingSoonContentAnimated) {
 					hasComingSoonContentAnimated = true // otherwise the animation will keep repeating
@@ -40,9 +36,6 @@ const HeroScreen = ({ zIndex }) => {
 							duration: 5,
 							backgroundClip: "text",
 							color: "transparent",
-							// background: `radial-gradient(circle at 50% ${val}vh, rgb(255, 212, 128) 0vh, rgb(234, 67, 116) 50vh, rgb(117, 32, 102) 90vh, rgba(32, 31, 66, 0) ${
-							// 	val + 20
-							// }vh)`,
 							stagger: 0.1,
 						},
 						{
@@ -58,16 +51,11 @@ const HeroScreen = ({ zIndex }) => {
 					gsap.fromTo(
 						".coming-soon-image",
 						{
-							// scale: 0.35,
 							opacity: 0.7,
-							// duration: 1,
 						},
 						{
-							// scale: 0.3,
 							duration: 1,
 							opacity: 1,
-							// ease: "power1.in",
-							// scale: 0.9,
 						}
 					)
 				}
@@ -76,22 +64,6 @@ const HeroScreen = ({ zIndex }) => {
 					gsap.to("#comingSoonScreen div, #comingSoonScreen img", {
 						opacity: progress - 0.2 < 0.67 ? 0 : progress - 0.2,
 					})
-					// gsap.to("#hero", {
-					// 	background: `linear-gradient(to bottom, black ${val}%, transparent ${
-					// 		val + 7
-					// 	}%)`,
-					// 	opacity: 1 - progress + 0.5,
-					// })
-					// gsap.fromTo(
-					// 	".masked-img",
-					// 	{
-					// 		// opacity: progress < 0.7 ? 1 - progress + 0.3 : 1,
-					// 		background: "white",
-					// 	},
-					// 	{
-					// 		background: "transparent",
-					// 	}
-					// )
 				}
 			},
 		})
