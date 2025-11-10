@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
 	padding: 0;
 	margin: 0;
@@ -32,14 +33,14 @@
 }
 
 .gradient-text {
-	background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546);
-	/* background: radial-gradient(
+	/* background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546); */
+	background: radial-gradient(
 		circle at 50% 120vh,
 		rgb(255, 212, 128) 0vh,
 		rgb(234, 67, 116) 50vh,
 		rgb(117, 32, 102) 90vh,
 		rgba(32, 31, 66, 0) 119.275vh
-	); */
+	);
 	color: transparent;
 	background-clip: text;
 	-webkit-background-clip: text;
