@@ -14,10 +14,18 @@
 	/* transform: translate(-50%, -50%); */
 }
 
+.vi-logo-img {
+	mask-image: radial-gradient(
+		circle at 50% 200%,
+		/* 50-70 */ rgb(0, 0, 0) 0%,
+		/* 50-70 */ rgba(0, 0, 0, 0) 50%
+	);
+}
+
 .masked-img {
 	mask-image: url("/hero/grand-theft.svg");
 	mask-repeat: no-repeat;
-	mask-position: center 18.7%;
+	mask-position: 47% 41%;
 	mask-size: 3500%;
 }
 .under-img {
@@ -28,20 +36,43 @@
 	width: 100vw;
 	scale: 1.1;
 }
-.vi-gradient-bg {
-	background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546);
-}
 
 .gradient-text {
 	/* background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546); */
-	background: radial-gradient(
-		circle at 50% 120vh,
+	background-image: radial-gradient(
+		circle at 50% 150vh,
 		rgb(255, 212, 128) 0vh,
 		rgb(234, 67, 116) 50vh,
 		rgb(117, 32, 102) 90vh,
-		rgba(32, 31, 66, 0) 119.275vh
+		rgba(32, 31, 66, 0) 100vh
 	);
 	color: transparent;
 	background-clip: text;
 	-webkit-background-clip: text;
+}
+
+/* ----------------------- used on hero2 component ----------------------------- */
+
+.vi-img {
+	background-image: url("hero/vi.png");
+	mask-image: radial-gradient(
+		circle at 50% 200%,
+		rgb(0, 0, 0) 0%,
+		rgba(0, 0, 0, 0) 50%
+	);
+	background-position-x: 50%;
+	background-position-y: 50%; /* 43% */
+	opacity: 0;
+	background-size: clamp(5000vh, 3500%, 0.002vh); /* clamp(29vh, 35%, 20vh) */
+	background-repeat: no-repeat;
+	width: 400px;
+	height: 270px;
+	z-index: 99;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -10%);
+}
+.vi-gradient-bg {
+	background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546);
 }
