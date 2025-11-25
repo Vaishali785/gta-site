@@ -39,11 +39,6 @@ const HeroWithTimeline = () => {
 				duration: 5,
 			}
 		)
-		const heroImgFadingOpacity = gsap.to(".under-img", {
-			opacity: 0.3,
-			background: "white",
-			ease: "expo.inOut",
-		})
 
 		const maskPositionChange = gsap.fromTo(
 			".masked-img",
@@ -56,33 +51,17 @@ const HeroWithTimeline = () => {
 				// duration: 1.5,
 			}
 		)
+
+		const heroImgFadingOpacity = gsap.to(".under-img", {
+			opacity: 0.3,
+			background: "white",
+			ease: "expo.inOut",
+		})
+
 		const heroImgFadingOpacityZero = gsap.to(".under-img", {
 			opacity: 0,
 			background: "white",
 			ease: "expo.inOut",
-		})
-		const revealViImage = gsap.to(".vi-logo-img", {
-			backgroundSize: `clamp(29vh, 35%, 20vh)`,
-			opacity: 1,
-			maskImage: `radial-gradient(
-                circle at 50% 50%,
-                rgb(0, 0, 0) 50%,
-                rgba(0, 0, 0, 0) 140%
-            )`,
-			duration: 1.5,
-		})
-		const scaleDownViImage = gsap.fromTo(
-			".vi-logo-img",
-			{
-				width: "225px",
-			},
-			{
-				width: "185px",
-				duration: 3,
-			}
-		)
-		const hideMaskedText = gsap.to(".masked-img", {
-			opacity: 0,
 		})
 
 		const dateTextReveal = gsap.fromTo(
@@ -94,15 +73,16 @@ const HeroWithTimeline = () => {
 			},
 			{
 				opacity: 1,
-				scale: 1.3,
-				backgroundImage: `radial-gradient(circle at 50% 120vh,rgb(255, 212, 128) 0vh,rgb(234, 67, 116) 50vh,rgb(117, 32, 102) 90vh,rgba(32, 31, 66, 0) 150vh)`,
-				// duration: 2,
+				scale: 1.25,
+				backgroundImage: `radial-gradient(circle at 50% 125vh,rgb(255, 212, 128) 0vh,rgb(234, 67, 116) 50vh,rgb(117, 32, 102) 90vh,rgba(32, 31, 66, 0) 150vh)`,
+				duration: 2,
 			}
 		)
+
 		const dateTextGradientAnimate = gsap.fromTo(
 			"#comingSoonContent",
 			{
-				scale: 1.3,
+				scale: 1.25,
 				backgroundImage: `radial-gradient(circle at 50% 100vh,rgb(255, 212, 128) 0vh,rgb(234, 67, 116) 50vh,rgb(117, 32, 102) 90vh,rgba(32, 31, 66, 0) 125vh)`,
 			},
 			{
@@ -112,17 +92,46 @@ const HeroWithTimeline = () => {
 			}
 		)
 
+		const revealViImage = gsap.to(".vi-logo-img", {
+			backgroundSize: `clamp(29vh, 35%, 20vh)`,
+			opacity: 1,
+			maskImage: `radial-gradient(
+                circle at 50% 50%,
+                rgb(0, 0, 0) 50%,
+                rgba(0, 0, 0, 0) 140%
+            )`,
+			duration: 1.5,
+		})
+
+		const hideMaskedText = gsap.to(".masked-img", {
+			opacity: 0,
+		})
+
+		const scaleDownViImage = gsap.fromTo(
+			".vi-logo-img",
+			{
+				width: "225px",
+			},
+			{
+				width: "185px",
+				duration: 3,
+				ease: "expo.inOut",
+			}
+		)
+
 		tl.add(scaleDownImg)
 			.add(maskLogoImage, "-=1.5")
 			.add(maskPositionChange, "-=1")
 			.add(heroImgFadingOpacity, "-=2")
 			.add(heroImgFadingOpacityZero, "-=1")
-			.add(dateTextReveal, "-=0.4")
-			.add(revealViImage, "+=0.4")
-			.add(hideMaskedText, "-=0.2")
-			.add(scaleDownViImage, "-=0.2")
-			.add(dateTextGradientAnimate, "-=3.2")
+			.add(dateTextReveal, "-=0.9")
+			.add(dateTextGradientAnimate, "-=0.3")
+			.add(revealViImage, "-=3")
+			.add(hideMaskedText, "-=2.9")
+			.add(scaleDownViImage, "-=2.8")
 	})
+
+	// still lags smooth effect
 	return (
 		<div id="hero-wrapper">
 			<div
