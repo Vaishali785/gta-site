@@ -1,10 +1,26 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
+
+/* --------------------------- FONTS ------------------------------ */
+.poppins-regular {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.poppins-semibold {
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+/* --------------------------- FONTS ------------------------------ */
 
 #hero {
 	background: linear-gradient(to bottom, black 90%, transparent 100%);
@@ -37,8 +53,7 @@
 	scale: 1.1;
 }
 
-.gradient-text {
-	/* background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546); */
+.transparent-gradient {
 	background-image: radial-gradient(
 		circle at 50% 150vh,
 		rgb(255, 212, 128) 0vh,
@@ -46,9 +61,31 @@
 		rgb(117, 32, 102) 90vh,
 		rgba(32, 31, 66, 0) 100vh
 	);
+}
+
+.gradient-text {
+	/* background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546); */
 	color: transparent;
 	background-clip: text;
 	-webkit-background-clip: text;
+}
+
+.colorful-gradient {
+	background-image: radial-gradient(
+		circle at 50% 50vh,
+		rgb(255, 212, 128) 0vh,
+		rgb(234, 67, 116) 50vh,
+		rgb(117, 32, 102) 90vh,
+		rgba(32, 31, 66, 0) 100vh
+	);
+}
+
+.black-gradient {
+	background: radial-gradient(
+		circle at 50% 50%,
+		rgb(0, 0, 0) 55%,
+		rgba(0, 0, 0, 0) 120%
+	);
 }
 
 /* ----------------------- used on hero2 component ----------------------------- */
