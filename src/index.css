@@ -1,9 +1,80 @@
 @import "tailwindcss";
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thaana:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+body {
+	background-color: black;
 }
+
+/* --------------------------- FONTS ------------------------------ */
+
+.kanit-regular {
+	font-family: "Kanit", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.poppins-regular {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.poppins-semibold {
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.poppins-bold {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+.noto-sans-thaana-regular {
+	font-family: "Noto Sans Thaana", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.noto-sans-thaana-semibold {
+	font-family: "Noto Sans Thaana", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.noto-sans-thaana-medium {
+	font-family: "Noto Sans Thaana", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.noto-sans-thaana-bold {
+	font-family: "Noto Sans Thaana", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.noto-sans-thaana-extraBold {
+	font-family: "Noto Sans Thaana", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 800;
+	font-style: normal;
+}
+
+/* --------------------------- FONTS ------------------------------ */
+
+:root {
+	--video-padding-inline: 13vw;
+}
+
+/* --------------------------- FONTS ------------------------------ */
 
 #hero {
 	background: linear-gradient(to bottom, black 90%, transparent 100%);
@@ -13,10 +84,18 @@
 	/* transform: translate(-50%, -50%); */
 }
 
+.vi-logo-img {
+	mask-image: radial-gradient(
+		circle at 50% 200%,
+		/* 50-70 */ rgb(0, 0, 0) 0%,
+		/* 50-70 */ rgba(0, 0, 0, 0) 50%
+	);
+}
+
 .masked-img {
 	mask-image: url("/hero/grand-theft.svg");
 	mask-repeat: no-repeat;
-	mask-position: center 18.7%;
+	mask-position: 47% 41%;
 	mask-size: 3500%;
 }
 .under-img {
@@ -27,20 +106,73 @@
 	width: 100vw;
 	scale: 1.1;
 }
-.vi-gradient-bg {
-	background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546);
-}
 
-.gradient-text {
-	background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546);
-	/* background: radial-gradient(
-		circle at 50% 120vh,
+.transparent-gradient {
+	background-image: radial-gradient(
+		circle at 50% 150vh,
 		rgb(255, 212, 128) 0vh,
 		rgb(234, 67, 116) 50vh,
 		rgb(117, 32, 102) 90vh,
-		rgba(32, 31, 66, 0) 119.275vh
-	); */
+		rgba(32, 31, 66, 0) 100vh
+	);
+}
+
+.gradient-text {
+	/* background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546); */
 	color: transparent;
 	background-clip: text;
 	-webkit-background-clip: text;
+}
+
+.colorful-gradient {
+	background-image: radial-gradient(
+		circle at 50% 50vh,
+		rgb(255, 212, 128) 0vh,
+		rgb(234, 67, 116) 50vh,
+		rgb(117, 32, 102) 90vh,
+		rgba(32, 31, 66, 0) 100vh
+	);
+}
+
+.black-gradient {
+	background: radial-gradient(
+		circle at 50% 50%,
+		rgb(0, 0, 0) 55%,
+		rgba(0, 0, 0, 0) 120%
+	);
+}
+
+/* ----------------------- used on jason video component ----------------------------- */
+.mask-video {
+	mask-image: radial-gradient(
+		circle at 150vw 50vh,
+		rgb(0, 0, 0) 100vw,
+		rgb(0, 0, 0) 150vw
+	);
+}
+
+/* ----------------------- used on hero2 component ----------------------------- */
+
+.vi-img {
+	background-image: url("hero/vi.png");
+	mask-image: radial-gradient(
+		circle at 50% 200%,
+		rgb(0, 0, 0) 0%,
+		rgba(0, 0, 0, 0) 50%
+	);
+	background-position-x: 50%;
+	background-position-y: 50%; /* 43% */
+	opacity: 0;
+	background-size: clamp(5000vh, 3500%, 0.002vh); /* clamp(29vh, 35%, 20vh) */
+	background-repeat: no-repeat;
+	width: 400px;
+	height: 270px;
+	z-index: 99;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -10%);
+}
+.vi-gradient-bg {
+	background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546);
 }
