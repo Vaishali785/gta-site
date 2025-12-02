@@ -1,14 +1,21 @@
 @import "tailwindcss";
 /* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thaana:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+body {
+	background-color: black;
 }
 
 /* --------------------------- FONTS ------------------------------ */
+
+.kanit-regular {
+	font-family: "Kanit", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
 .poppins-regular {
 	font-family: "Poppins", sans-serif;
 	font-weight: 400;
@@ -20,6 +27,53 @@
 	font-weight: 600;
 	font-style: normal;
 }
+
+.poppins-bold {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+.noto-sans-thaana-regular {
+	font-family: "Noto Sans Thaana", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.noto-sans-thaana-semibold {
+	font-family: "Noto Sans Thaana", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.noto-sans-thaana-medium {
+	font-family: "Noto Sans Thaana", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.noto-sans-thaana-bold {
+	font-family: "Noto Sans Thaana", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.noto-sans-thaana-extraBold {
+	font-family: "Noto Sans Thaana", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 800;
+	font-style: normal;
+}
+
+/* --------------------------- FONTS ------------------------------ */
+
+:root {
+	--video-padding-inline: 13vw;
+}
+
 /* --------------------------- FONTS ------------------------------ */
 
 #hero {
@@ -85,6 +139,15 @@
 		circle at 50% 50%,
 		rgb(0, 0, 0) 55%,
 		rgba(0, 0, 0, 0) 120%
+	);
+}
+
+/* ----------------------- used on jason video component ----------------------------- */
+.mask-video {
+	mask-image: radial-gradient(
+		circle at 150vw 50vh,
+		rgb(0, 0, 0) 100vw,
+		rgb(0, 0, 0) 150vw
 	);
 }
 
