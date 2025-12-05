@@ -4,6 +4,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thaana:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 
+@font-face {
+	font-family: "LS";
+	src: url("/fonts/LandasansMedium-ALJ6m.otf");
+	font-weight: 500;
+}
+@font-face {
+	font-family: "LS";
+	src: url("/fonts/LandasansUltraLight-qZ080.otf");
+	font-weight: 100;
+}
+
+.LS-medium {
+	font-family: "LS";
+	font-weight: 600; /* Apply specific weight if defined in @font-face */
+}
+
 body {
 	background-color: black;
 }
