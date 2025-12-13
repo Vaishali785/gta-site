@@ -1,0 +1,106 @@
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
+import React, { useRef } from "react"
+
+const JasonWithGunVideo = () => {
+	const videoRef2 = useRef()
+	useGSAP(() => {
+		const videoTimeline2 = gsap.timeline({
+			scrollTrigger: {
+				trigger: "#video2Section",
+				start: "top top",
+				end: "+=3800",
+				scrub: true,
+				pin: true,
+				markers: { startColor: "golden", endColor: "yellow" },
+			},
+		})
+
+		const video2TextShow = () =>
+			gsap.fromTo(
+				"#video2Text",
+				{
+					opacity: 0,
+					bottom: "5vh",
+				},
+				{
+					opacity: 1,
+					bottom: "8vh",
+					duration: 2,
+				}
+			)
+
+		function addVideoPlayback2() {
+			const dur = videoRef2.current.duration
+			if (!dur || isNaN(dur)) {
+				console.warn("Video metadata not ready")
+				return
+			}
+
+			// Add AFTER filters and zIndex animation
+			videoTimeline2
+				.call(() => videoRef2.current.play(), "-=0.5")
+				.fromTo(
+					videoRef2.current,
+					{
+						currentTime: 0,
+					},
+					{
+						currentTime: videoRef2.current.duration,
+						ease: "none",
+						// duration: ,
+					},
+					"videoPlayLabel2"
+				) // holds timeline while video plays
+				.call(() => videoRef2.current.pause())
+
+			videoTimeline2
+				// .add(video2PositionFix())
+				// .add(video2IncreaseOpacity(), "videoPlayLabel2-=0.5")
+				.add(video2TextShow(), "videoPlayLabel2-=0.5")
+		}
+
+		if (
+			videoRef2.current.readyState >= 1 &&
+			!isNaN(videoRef2.current.duration)
+		) {
+			// addVideoPlayback()
+			addVideoPlayback2()
+		} else {
+			videoRef2.current.addEventListener(
+				"loadedmetadata",
+				() => {
+					// addVideoPlayback()
+					addVideoPlayback2()
+				},
+				{
+					once: true,
+				}
+			)
+		}
+	})
+	return (
+		<section id="video2Section" className="w-full h-screen ">
+			<div className="w-full h-full mask-video" id="maskedVideo2">
+				<video
+					src="/videos/output2.mp4"
+					muted
+					id="video2"
+					// loop
+					playsInline
+					preload="autoplay"
+					ref={videoRef2}
+					className="w-full h-screen object-cover "
+				/>
+			</div>
+			<q
+				id="video2Text"
+				className="text-[70px] LS-medium text-[#fff9cb] col-start-2 col-span-4 m-0 uppercase tracking-[2px] absolute bottom-[5vh] left-1/5 w-1/3 leading-[0.9] opacity-0"
+			>
+				If anything happens, I'm right behind you.
+			</q>
+		</section>
+	)
+}
+
+export default JasonWithGunVideo
