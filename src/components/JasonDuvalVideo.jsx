@@ -11,7 +11,7 @@ const JasonDuvalVideo = () => {
 			scrollTrigger: {
 				trigger: "#videoSection",
 				start: "top top",
-				end: "+=3300",
+				end: "+=2300",
 				scrub: true,
 				pin: true,
 			},

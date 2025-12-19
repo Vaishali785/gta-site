@@ -9,10 +9,9 @@ const JasonWithGunVideo = () => {
 			scrollTrigger: {
 				trigger: "#video2Section",
 				start: "top top",
-				end: "+=3800",
+				end: "+=3000",
 				scrub: true,
 				pin: true,
-				markers: { startColor: "golden", endColor: "yellow" },
 			},
 		})
 
@@ -26,8 +25,16 @@ const JasonWithGunVideo = () => {
 				{
 					opacity: 1,
 					bottom: "8vh",
-					duration: 2,
+					// duration: 1,
+					// delay: 2,
 				}
+			)
+
+		const reduceOpacity = () =>
+			gsap.fromTo(
+				"#maskedVideo2,#video2Text ",
+				{ opacity: 1 },
+				{ opacity: 0, zIndex: 30 }
 			)
 
 		function addVideoPlayback2() {
@@ -39,7 +46,7 @@ const JasonWithGunVideo = () => {
 
 			// Add AFTER filters and zIndex animation
 			videoTimeline2
-				.call(() => videoRef2.current.play(), "-=0.5")
+				// .call(() => videoRef2.current.play(), "-=0.5")
 				.fromTo(
 					videoRef2.current,
 					{
@@ -52,12 +59,13 @@ const JasonWithGunVideo = () => {
 					},
 					"videoPlayLabel2"
 				) // holds timeline while video plays
-				.call(() => videoRef2.current.pause())
+			// .call(() => videoRef2.current.pause())
 
 			videoTimeline2
 				// .add(video2PositionFix())
 				// .add(video2IncreaseOpacity(), "videoPlayLabel2-=0.5")
-				.add(video2TextShow(), "videoPlayLabel2-=0.5")
+				.add(video2TextShow(), "videoPlayLabel2-=0.1")
+				.add(reduceOpacity(), "videoPlayLabel2+=0.4")
 		}
 
 		if (
