@@ -1,17 +1,21 @@
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all"
+import { ReactLenis, useLenis } from "lenis/react"
 import ClippedImageSection from "./components/ClippedImageSection"
-import HeroWithTimeline from "./components/HeroWithTimeline"
+import ClosingSection from "./components/ClosingSection"
+import HeroWithBigImg from "./components/HeroWithBigImg"
 import IntroText from "./components/IntroText"
 import JasonDuvalVideo from "./components/JasonDuvalVideo"
 import JasonWithGunVideo from "./components/JasonWithGunVideo"
+import Navbar from "./components/Navbar"
+import RaulBautistaIntro from "./components/RaulBautistaIntro"
 
 // export const MasterTlContext = createContext(null)
 gsap.registerPlugin(ScrollTrigger)
 function App() {
-	// const lenis = useLenis((lenis) => {
-	// 	// called every scroll
-	// 	// console.log(lenis.velocity, lenis.limit, lenis.progress)
+	const lenis = useLenis()
+	// called every scroll
+	// console.log(lenis.velocity, lenis.limit, lenis.progress)
 	// })
 
 	// useEffect(() => {
@@ -45,13 +49,17 @@ function App() {
 	return (
 		// <MasterTlContext.Provider value={masterTl.current}>
 		<div className="relative overflow-hidden" id="wrapper">
-			{/* <ReactLenis root options={{ lerp: 0.06, smoothWheel: true }} /> */}
+			<ReactLenis root options={{ lerp: 0.2, smoothWheel: true }} />
 			{/* <Hero2 zIndex={50} /> */}
-			<HeroWithTimeline />
+			<Navbar />
+			<HeroWithBigImg />
 			<IntroText />
 			<JasonDuvalVideo />
 			<JasonWithGunVideo />
 			<ClippedImageSection />
+			<RaulBautistaIntro />
+			<ClosingSection />
+			{/* <Footer /> */}
 			{/* <div className="h-[1440px] w-full bg-red-400"></div> */}
 		</div>
 		// </MasterTlContext.Provider>
