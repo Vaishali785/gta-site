@@ -260,7 +260,7 @@ const HeroWithTimeline = () => {
 						className="vi-logo-img w-[225px] absolute top-1/6 left-1/2 -translate-x-1/2"
 					/>
 					<div className="masked-img bg-black">
-						<picture>
+						{/* <picture>
 							<source
 								media="(min-width:1020px)"
 								srcSet="/hero/Jason_and_Lucia_02_With_Logos_landscape.jpg"
@@ -275,8 +275,17 @@ const HeroWithTimeline = () => {
 								src="/hero/Jason_and_Lucia_02_With_Logos_landscape.jpg"
 								alt="Jason and Lucia with logos"
 								className="object-center object-cover under-img"
-							/>
-						</picture>
+							/> */}
+						{/* </picture> */}
+						<img
+							src="/hero/logoImg.webp"
+							className="absolute left-[0.5%] -top-[3%] z-[1]  "
+						/>
+						<img
+							src="/hero/heroImg.webp"
+							alt="Jason and Lucia with logos"
+							className="object-center object-cover under-img"
+						/>
 					</div>
 				</div>
 
