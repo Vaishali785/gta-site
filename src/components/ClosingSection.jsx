@@ -84,7 +84,7 @@ const ClosingSection = () => {
 	return (
 		<section id="lastSection" className=" h-screen z-20 max-md:h-dvh">
 			<video
-				src="/videos/output3.mp4"
+				src="/videos/car_closing.mp4"
 				muted
 				id="lastVideo"
 				preload="auto"

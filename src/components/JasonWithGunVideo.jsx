@@ -14,7 +14,7 @@ const JasonWithGunVideo = () => {
 			},
 			(context) => {
 				console.log(context.conditions)
-				let { isMobile, isTab, isLaptop } = context.conditions
+				let { isMobile } = context.conditions
 
 				const videoTimeline2 = gsap.timeline({
 					scrollTrigger: {
@@ -110,7 +110,7 @@ const JasonWithGunVideo = () => {
 		<section id="video2Section" className="w-full h-screen ">
 			<div className="w-full h-full mask-video-gun relative" id="maskedVideo2">
 				<video
-					src="/videos/output2.mp4"
+					src="/videos/jason_with_gun.mp4"
 					muted
 					id="video2"
 					// loop

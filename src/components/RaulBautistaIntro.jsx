@@ -193,11 +193,6 @@ const RaulBautistaIntro = () => {
 						// pinSpacing: false,
 					},
 				})
-				const scalePostcard = () =>
-					gsap.to(".postcard", {
-						scale: 1,
-						duration: 2,
-					})
 
 				const scalePostcardBg = () =>
 					gsap.to(".postcard-bg", {
@@ -282,7 +277,7 @@ const RaulBautistaIntro = () => {
 						className="video w-[calc(100%_+var(--video-padding-inline))] min-h-screen col-start-7 col-span-6 max-md:col-start-1 max-md:w-full"
 					>
 						<video
-							src="/raul_bautista/raul.mp4"
+							src="/videos/raul.mp4"
 							className="h-full my-auto w-full  object-cover max-md:w-full max-md:max-h-3/4 max-md:pt-5"
 							muted
 							// loop
