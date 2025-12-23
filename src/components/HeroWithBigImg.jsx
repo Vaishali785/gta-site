@@ -289,34 +289,12 @@ const HeroWithBigImg = () => {
 							src="/hero/logoImg.webp"
 							className="absolute left-[5px] -top-[10px] max-md:top-[29.5vh] max-md:scale-[2.8] max-md:left-[3.5vw] z-[1]  bg-logo"
 						/>
-						{/* <picture>
-							<source
-								media="(min-width:1024px)"
-								srcSet="/hero/heroImg.webp"
-								// className="mobile object-center  object-cover min-h-screen hero-bg-img under-img1"
-							/>
-							<source
-								media="(min-width:751px && max-width: 1024px)"
-								srcSet="/hero/tab.jpg"
-								// className="object-center object-cover under-img "
-							/>
-							<img
-								src="/hero/heroImgMobile.jpg"
-								alt="Jason and Lucia with logos"
-								className="laptop object-center object-cover md:min-h-screen hero-bg-img under-img"
-							/>
-						</picture> */}
+
 						<img
 							src="/hero/heroImg.webp"
 							alt="Jason and Lucia with logos"
 							className="laptop object-center object-cover max-md:min-h-dvh md:min-h-screen hero-bg-img under-img"
 						/>
-
-						{/* <img
-							src="/hero/heroImg.webp"
-							alt="Jason and Lucia with logos"
-							className="object-center object-cover min-h-screen hero-bg-img under-img"
-						/> */}
 					</div>
 				</div>
 
