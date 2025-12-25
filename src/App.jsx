@@ -30,6 +30,14 @@ function App() {
 		img.src = "/hero/heroImg.webp"
 
 		img.onload = () => setLoaded(true)
+
+		const onLoad = () => {
+			ScrollTrigger.refresh()
+		}
+
+		window.addEventListener("load", onLoad)
+
+		return () => window.removeEventListener("load", onLoad)
 	}, [])
 
 	if (!loaded) return <Loading />
