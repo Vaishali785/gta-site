@@ -26,6 +26,7 @@ const JasonDuvalVideo = () => {
 						pin: true,
 						markers: { startColor: "white", endColor: "white" },
 						invalidateOnRefresh: true,
+						refreshPriority: 1,
 					},
 				})
 
