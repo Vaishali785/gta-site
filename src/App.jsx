@@ -1,7 +1,7 @@
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all"
 import { ReactLenis } from "lenis/react"
-import { Suspense, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import ClippedImageSection from "./components/ClippedImageSection"
 import ClosingSection from "./components/ClosingSection"
 import HeroWithBigImg from "./components/HeroWithBigImg"
@@ -43,13 +43,13 @@ function App() {
 			<Navbar />
 			<HeroWithBigImg />
 			<IntroText />
-			<Suspense fallback={null}>
-				<JasonDuvalVideo />
-				<JasonWithGunVideo />
-				<ClippedImageSection />
-				<RaulBautistaIntro />
-				<ClosingSection />
-			</Suspense>
+			{/* <Suspense fallback={null}> */}
+			<JasonDuvalVideo />
+			<JasonWithGunVideo />
+			<ClippedImageSection />
+			<RaulBautistaIntro />
+			<ClosingSection />
+			{/* </Suspense> */}
 			{/* </Suspense> */}
 		</div>
 	)
