@@ -68,6 +68,12 @@ body {
 	font-weight: 700;
 	font-style: normal;
 }
+
+.poppins-extrabold {
+	font-family: "Poppins", sans-serif;
+	font-weight: 800;
+	font-style: normal;
+}
 .noto-sans-thaana-regular {
 	font-family: "Noto Sans Thaana", sans-serif;
 	font-optical-sizing: auto;
@@ -107,6 +113,7 @@ body {
 
 :root {
 	--video-padding-inline: 13vw;
+	--video-mobile-padding-inline: 40px;
 }
 
 /* --------------------------- FONTS ------------------------------ */
@@ -184,6 +191,34 @@ body {
 		rgb(0, 0, 0) 100vw,
 		rgb(0, 0, 0) 150vw
 	);
+}
+
+.mask-video-gun {
+	mask-image: radial-gradient(
+		circle at 75vw 25vh,
+		rgb(0, 0, 0) 65vw,
+		rgba(0, 0, 0, 0.5) 90vw
+	);
+	/* mask-image: radial-gradient(
+		circle at 80vw 30vh,
+		rgb(0, 0, 0) 60vw,
+		rgba(0, 0, 0, 0.5) 90vw
+	); */
+}
+
+/* radial-gradient(circle at 48vw 40vh, rgb(0, 0, 0) 60vw, rgba(0, 0, 0, 0.667) 75vw) */
+
+.jason-quotes::before {
+	content: "''";
+	position: absolute;
+	left: -30px;
+	transform: rotateY(180deg);
+}
+.jason-quotes::after {
+	content: "''";
+	position: absolute;
+	/* right: -10px; */
+	/* transform: rotateY(180deg); */
 }
 
 /* ----------------------- used on clipped img component ----------------------------- */
@@ -302,4 +337,24 @@ body {
 }
 .vi-gradient-bg {
 	background: linear-gradient(#4740bd, #bc3dc3, #ff5fa5, #ff868b, #fd9546);
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* ----------------------- Mobile ----------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 750px) {
+	.quotes::before {
+		content: "''";
+		position: absolute;
+		left: -20px;
+		transform: rotateY(180deg);
+	}
+	.quotes::after {
+		content: "''";
+		position: initial;
+		padding-left: 10px;
+		/* right: 70px; */
+		/* transform: rotateY(180deg); */
+	}
 }

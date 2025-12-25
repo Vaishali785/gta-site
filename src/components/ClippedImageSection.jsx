@@ -43,11 +43,11 @@ const ClippedImageSection = () => {
 			gsap.fromTo(
 				".image1",
 				{
-					top: "-56px",
+					top: "56px",
 				},
 				{
-					top: "0px",
-					duration: 0.8,
+					top: "0",
+					duration: 2,
 				}
 			)
 
@@ -74,23 +74,23 @@ const ClippedImageSection = () => {
 	})
 	return (
 		<div id="clipped-img-section" className="relative z-[41] ">
-			<div className=" clipped-img clipped-img-bottom h-full min-h-[1000px] relative">
+			<div className=" clipped-img clipped-img-bottom h-full max-md:min-h-[800px] min-h-[1000px] relative">
 				<img
 					src="/jason-vid-section/jason.webp"
 					alt=""
-					className="image1 object-cover absolute -top-14"
+					className="image1 object-cover absolute top-14 max-md:top-0 max-md:h-full max-md:object-[35%]"
 				/>
 			</div>
 
 			<div
 				id="clippedImgText"
-				className="clip-text flex h-[95vh] w-full justify-center items-center gap-40 mx-auto bg-black gradient-text orangish-gradient z-[41] -my-[10vh]"
+				className="clip-text flex max-md:flex-col h-[95vh] w-full justify-center items-center gap-40 max-md:gap-[60px] mx-auto bg-black gradient-text orangish-gradient z-[41] -my-[10vh]"
 			>
-				<div className="w-1/3 text-8xl  font-semibold">
+				<div className="w-1/3 text-8xl font-semibold max-md:w-5/6 poppins-extrabold">
 					<div>Only in</div>
 					<div>Leonida</div>
 				</div>
-				<div className="w-1/5 text-3xl ">
+				<div className="w-1/5 max-md:w-3/4 text-3xl poppins-semibold">
 					<p>
 						When the sun fades and the neon glows, everyone has something to
 						gain - and more to lose.

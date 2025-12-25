@@ -9,7 +9,7 @@ const ClosingSection = () => {
 			scrollTrigger: {
 				trigger: "#lastSection",
 				start: "top top",
-				end: "+=1000",
+				end: "+=1300",
 				pin: true,
 				scrub: true,
 			},
@@ -82,9 +82,9 @@ const ClosingSection = () => {
 			.add(footerTextGradient(), "-=3.5")
 	})
 	return (
-		<section id="lastSection" className=" h-screen z-20 ">
+		<section id="lastSection" className=" h-screen z-20 max-md:h-dvh">
 			<video
-				src="/videos/output3.mp4"
+				src="/videos/car_closing.mp4"
 				muted
 				id="lastVideo"
 				preload="auto"
@@ -99,33 +99,29 @@ const ClosingSection = () => {
 			>
 				<div
 					id="footerIntro"
-					className="w-full min-h-screen flex flex-col justify-evenly items-center scale-105"
+					className="w-full min-h-screen flex flex-col justify-evenly items-center scale-105 max-md:justify-center max-md:gap-20 max-md:min-h-dvh"
 				>
-					<img src="/hero/vi.png" alt="" className="w-[200px]" />
+					<img
+						src="/hero/vi.png"
+						alt=""
+						className="w-[200px] max-md:w-[170px]"
+					/>
 
 					<div
-						className="flex flex-col items-center  gradient-text transparent-gradient scale-150 opacity-100 poppins-semibold"
+						className="flex flex-col items-center  gradient-text transparent-gradient scale-150 max-md:scale-125 opacity-100 poppins-semibold"
 						id="footerIntroText"
 					>
 						{/* <div className="flex items-center justify-center flex-col"></div> */}
-						<div className="font-normal text-xs -mb-[34px] tracking-[10px] ">
+						<div className="font-normal poppins-semibold text-xs -mb-[34px] tracking-[10px] max-md:-mb-3.5 max-md:tracking-[0px] max-md:text-[16px] ">
 							Developed By
 						</div>
-						<div className="font-extrabold text-[150px] uppercase">
+						<div className="font-extrabold text-[150px] uppercase max-md:text-[17vw] poppins-extrabold">
 							Vaishali
 						</div>
-						<div className="text-[12px] font-light uppercase mx-auto tracking-[20px] -mt-[30px] pl-4">
+						<div className="text-[12px] font-light uppercase mx-auto tracking-[20px] -mt-[30px] pl-4  max-md:text-[13px] max-md:tracking-[4px] max-md:-mt-3.5 poppins-semibold">
 							Inspired by Rockstar Games
 						</div>
 					</div>
-				</div>
-
-				<div className="footer-tech-stack w-full h-fit p-4 rounded-2xl">
-					<p>A FRONTEND MOTION STUDY</p>
-					<p>
-						Exploring cinematic UI, scroll-driven animation, and GSAP timelines
-						inspired by GTA VI.
-					</p>
 				</div>
 			</div>
 		</section>
