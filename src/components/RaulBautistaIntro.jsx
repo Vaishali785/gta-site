@@ -92,7 +92,7 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#raulHalfVideo",
 						start: "top top",
-						end: isTab ? "+=1500" : "+=800",
+						end: "+=800",
 						pin: true,
 						scrub: true,
 						anticipatePin: 1,
