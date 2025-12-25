@@ -7,8 +7,8 @@ const HeroWithBigImg = () => {
 		const mm = gsap.matchMedia()
 		mm.add(
 			{
-				isMobile: "(max-width: 750px)",
-				isTab: "(min-width: 751px  && max-width: 1023px)",
+				isMobile: "(max-width: 768px)",
+				isTab: "(min-width: 769px) and (max-width: 1023px)",
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
@@ -21,11 +21,7 @@ const HeroWithBigImg = () => {
 						end: `bottom top+=30%`,
 						scrub: true,
 						pin: true,
-						// markers: true,
-						// fastScrollEnd: 500,
 					},
-					// paused: true,
-					// duration: 10,
 				})
 				const heroSection = () =>
 					gsap.to("#hero-wrapper", {
@@ -34,14 +30,6 @@ const HeroWithBigImg = () => {
 					})
 				const scaleDownImg = () =>
 					gsap.fromTo(".images", { scale: 1.1 }, { scale: 1, ease: "circ.in" })
-				// gsap.fromTo(
-				// 	".under-img",
-				// 	{
-				// 		scale: 1.2,
-				// 		ease: "power2.inOut",
-				// 	},
-				// 	{ scale: 1, ease: "power2.inOut" }
-				// )
 
 				const fadeBgLogo = () =>
 					gsap.fromTo(
@@ -62,7 +50,7 @@ const HeroWithBigImg = () => {
 							// maskPosition: "47% 41%",
 						},
 						{
-							maskSize: isMobile ? "45%" : "16%",
+							maskSize: isMobile ? "45%" : isTab ? "18%" : "16%",
 							// maskPosition: "50% 12%",
 							// opacity: 0.5,
 							background: "white",
@@ -78,7 +66,11 @@ const HeroWithBigImg = () => {
 							maskPosition: "50% 18%",
 						},
 						{
-							maskPosition: isMobile ? "50% 21dvh" : "50% 20.4%",
+							maskPosition: isMobile
+								? "50% 21dvh"
+								: isTab
+								? "50% 20%"
+								: "50% 20.4%",
 							ease: "expo.inOut",
 							// duration: 1.5,
 						}
@@ -150,10 +142,10 @@ const HeroWithBigImg = () => {
 					gsap.fromTo(
 						".vi-logo-img",
 						{
-							width: isMobile ? "185px" : "225px",
+							width: isMobile ? "185px" : isTab ? "18vw" : "225px",
 						},
 						{
-							width: isMobile ? "135px" : "185px",
+							width: isMobile ? "135px" : isTab ? "14vw" : "185px",
 							duration: 3,
 							ease: "expo.inOut",
 						}
@@ -264,7 +256,7 @@ const HeroWithBigImg = () => {
 					.add(scaleDownIntroText(), "-=1")
 					.add(transparentBgOfIntro())
 					.add(hideIntroText())
-					.add(hideHeroSection(), isMobile ? "-=2.5" : "-=1")
+					.add(hideHeroSection(), isMobile ? "-=2.5" : isTab ? "-=3" : "-=1")
 					.add(hideStorySection())
 					.add(removeBlackScreen())
 			}
@@ -276,7 +268,7 @@ const HeroWithBigImg = () => {
 		<section id="hero-wrapper" className="max-h-[1200px]">
 			<div
 				id="hero"
-				className={`w-full h-screen z-40 flex items-center justify-center max-md:h-dvh`}
+				className={`w-full h-screen relative z-40 flex items-center justify-center max-md:h-dvh`}
 			>
 				<div className="relative w-fit h-fit max-md:h-dvh !bg-black">
 					<img
@@ -287,13 +279,13 @@ const HeroWithBigImg = () => {
 					<div className="masked-img bg-black images">
 						<img
 							src="/hero/logoImg.webp"
-							className="absolute left-[5px] -top-[10px] max-md:top-[29.5vh] max-md:scale-[2.8] max-md:left-[3.5vw] z-[1]  bg-logo"
+							className="absolute left-[5px] -top-[10px] md:max-lg:top-[6.7vh] md:max-lg:left-[1.4vw] max-md:top-[29.5vh] max-md:scale-[2.8] max-md:left-[3.5vw] z-[1]  bg-logo"
 						/>
 
 						<img
 							src="/hero/heroImg.webp"
 							alt="Jason and Lucia with logos"
-							className="laptop object-center object-cover max-md:min-h-dvh md:min-h-screen hero-bg-img under-img"
+							className="laptop object-center object-cover max-md:min-h-dvh md:max-lg:min-h-screen hero-bg-img under-img"
 						/>
 					</div>
 				</div>
@@ -302,18 +294,16 @@ const HeroWithBigImg = () => {
 					className="flex flex-col items-center absolute top-[42%] max-md:top-[45dvh] gradient-text transparent-gradient scale-150 opacity-0 poppins-semibold "
 					id="comingSoonContent"
 				>
-					<div className="max-md:poppins-bold font-extrabold max-md:text-[11vw] text-8xl uppercase">
+					<div className="max-md:poppins-bold font-extrabold max-md:text-[11vw] md:max-lg:text-[10vh] text-8xl uppercase">
 						Coming
 					</div>
-					<div className="max-md:poppins-bold font-extrabold max-md:text-[11vw] text-8xl uppercase">
+					<div className="max-md:poppins-bold font-extrabold max-md:text-[11vw] md:max-lg:text-[10vh] text-8xl uppercase">
 						December 25
 					</div>
-					<div className="max-md:poppins-bold font-extrabold max-md:text-[11vw] text-8xl uppercase">
+					<div className="max-md:poppins-bold font-extrabold max-md:text-[11vw] md:max-lg:text-[10vh] text-8xl uppercase">
 						2025
 					</div>
 				</div>
-
-				{/* <IntroText /> */}
 			</div>
 			<div className="black-screen black-gradient w-screen h-screen"></div>
 		</section>

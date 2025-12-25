@@ -11,12 +11,12 @@ const JasonDuvalVideo = () => {
 		mm.add(
 			{
 				isMobile: "(max-width: 750px)",
-				isTab: "(min-width: 751px  && max-width: 1023px)",
+				isTab: "(min-width: 751px) and (max-width: 1023px)",
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
 				console.log(context.conditions)
-				let { isMobile, isTab, isLaptop } = context.conditions
+				let { isMobile } = context.conditions
 				const videoTimeline = gsap.timeline({
 					scrollTrigger: {
 						trigger: "#videoSection",
@@ -179,17 +179,17 @@ const JasonDuvalVideo = () => {
 				</div>
 				<div
 					id="JasonVideo"
-					className="absolute -bottom-[200vh] max-md:-bottom-[400vh] left-0 w-screen  text-white grid grid-cols-12 max-md:grid-cols-6 px-[var(--video-padding-inline)] max-md:px-[var(--video-mobile-padding-inline)] gap-x-6 max-md:gap-x-2 leading-[1.3]"
+					className="absolute -bottom-[200vh] max-md:-bottom-[400vh] md:max-lg:-bottom-[250vh] left-0 w-screen  text-white grid grid-cols-12 max-md:grid-cols-6 px-[var(--video-padding-inline)] max-md:px-[var(--video-mobile-padding-inline)] gap-x-6 max-md:gap-x-2 leading-[1.3]"
 				>
 					<div className="left-side grid grid-cols-6 col-span-6  ">
-						<h2 className="text-[90px] LS-medium text-[#fff9cb] col-start-2 max-md:col-start-1 col-span-4 m-0 uppercase tracking-[1px] max-md:text-[12vh] max-md:leading-[1] max-md:tracking-[3px]">
+						<h2 className="text-[90px] LS-medium text-[#fff9cb] col-start-2 max-md:col-start-1 col-span-4 md:max-lg:col-span-6 m-0 uppercase tracking-[1px] max-md:text-[12vh] max-md:leading-[1] max-md:tracking-[3px]">
 							Jason Duval
 						</h2>
-						<div className="col-start-2 col-span-4 mt-16 mb-28  max-md:col-start-1  max-md:mt-8 max-md:mb-10 max-md:col-span-5  ">
-							<p className="text-4xl noto-sans-thaana-mediumm text-[#ffb0c4] mb-5 poppins-bold max-md:tracking-[1px]">
+						<div className="col-start-2 col-span-4 mt-16 mb-28  max-md:col-start-1  max-md:mt-8 max-md:mb-10 max-md:col-span-5 md:max-lg:col-span-6 ">
+							<p className="text-4xl text-[#ffb0c4] mb-5 poppins-bold max-md:tracking-[1px]">
 								Jason wants an easy life, but things just keep getting harder.
 							</p>
-							<p className="text-xl kanit-regularr poppins-bold">
+							<p className="text-xl poppins-bold">
 								Jason grew up around grifters and crooks. After a stint in the
 								Army trying to shake off his troubled teens, he found himself in
 								the Keys doing what he knows best, working for local drug

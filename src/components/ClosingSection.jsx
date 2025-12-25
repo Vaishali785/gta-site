@@ -12,6 +12,7 @@ const ClosingSection = () => {
 				end: "+=1300",
 				pin: true,
 				scrub: true,
+				markers: true,
 			},
 		})
 
@@ -111,14 +112,13 @@ const ClosingSection = () => {
 						className="flex flex-col items-center  gradient-text transparent-gradient scale-150 max-md:scale-125 opacity-100 poppins-semibold"
 						id="footerIntroText"
 					>
-						{/* <div className="flex items-center justify-center flex-col"></div> */}
-						<div className="font-normal poppins-semibold text-xs -mb-[34px] tracking-[10px] max-md:-mb-3.5 max-md:tracking-[0px] max-md:text-[16px] ">
+						<div className="font-normal poppins-semibold text-xs -mb-[34px] tracking-[10px] max-md:-mb-3.5 md:max-lg:-mb-7 max-md:tracking-[0px] max-md:text-[16px] md:max-lg:text-[9px] md:max-lg:tracking-[5px]">
 							Developed By
 						</div>
-						<div className="font-extrabold text-[150px] uppercase max-md:text-[17vw] poppins-extrabold">
+						<div className="font-extrabold text-[150px] uppercase max-md:text-[17vw] md:max-lg:text-[12vw] poppins-extrabold">
 							Vaishali
 						</div>
-						<div className="text-[12px] font-light uppercase mx-auto tracking-[20px] -mt-[30px] pl-4  max-md:text-[13px] max-md:tracking-[4px] max-md:-mt-3.5 poppins-semibold">
+						<div className="lg:text-[12px] font-light uppercase mx-auto tracking-[20px] -mt-[30px] pl-4  max-md:text-[13px] max-md:tracking-[4px] md:max-lg:tracking-[13px] md:max-lg:text-[8px]  max-md:-mt-3.5 poppins-semibold">
 							Inspired by Rockstar Games
 						</div>
 					</div>

@@ -9,7 +9,7 @@ const JasonWithGunVideo = () => {
 		mm.add(
 			{
 				isMobile: "(max-width: 750px)",
-				isTab: "(min-width: 751px  && max-width: 1023px)",
+				isTab: "(min-width: 751px) and (max-width: 1023px)",
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
@@ -122,7 +122,7 @@ const JasonWithGunVideo = () => {
 			</div>
 			<p
 				id="video2Text"
-				className="jason-quotes text-[70px] LS-medium text-[#fff9cb] col-start-2 col-span-4 m-0 uppercase tracking-[2px] absolute bottom-[0vh] left-1/5 max-md:left-[10%] max-md:w-[53.5%] max-md:text-[15vw] w-1/3 leading-[0.9] opacity-0"
+				className="jason-quotes text-[70px] LS-medium text-[#fff9cb] col-start-2 col-span-4 m-0 uppercase tracking-[2px] absolute bottom-[0vh] left-1/5 md:max-lg:left-[8%] md:max-lg:w-1/2 max-md:left-[10%] max-md:w-[53.5%] max-md:text-[15vw] w-1/3 leading-[0.9] opacity-0"
 			>
 				If anything happens, I'm right behind you.
 			</p>
