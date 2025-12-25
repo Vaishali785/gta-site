@@ -22,6 +22,7 @@ const HeroWithBigImg = () => {
 						scrub: true,
 						pin: true,
 						markers: { startColor: "blue", endColor: "blue" },
+						invalidateOnRefresh: true,
 					},
 				})
 				const heroSection = () =>

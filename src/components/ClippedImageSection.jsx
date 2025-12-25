@@ -21,6 +21,7 @@ const ClippedImageSection = () => {
 						end: isTab ? "+=1000" : `+=1600`,
 						scrub: true,
 						markers: { startColor: "green", endColor: "green" },
+						invalidateOnRefresh: true,
 					},
 				})
 

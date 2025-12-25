@@ -24,6 +24,7 @@ const JasonWithGunVideo = () => {
 						scrub: true,
 						pin: true,
 						markers: { startColor: "yellow", endColor: "yellow" },
+						invalidateOnRefresh: true,
 					},
 				})
 
