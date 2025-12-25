@@ -19,7 +19,7 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#raulBautistaSection",
 						start: "top 35%",
-						end: isTab ? "+=1000" : "+=1600",
+						end: "+=1600",
 						scrub: true,
 						markers: { startColor: "pink", endColor: "pink" },
 					},
@@ -92,7 +92,7 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#raulHalfVideo",
 						start: "top top",
-						end: isTab ? "+=1500" : "+=800",
+						end: "+=800",
 						pin: true,
 						scrub: true,
 						anticipatePin: 1,
