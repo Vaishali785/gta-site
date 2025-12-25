@@ -25,6 +25,13 @@ gsap.registerPlugin(ScrollTrigger)
 function App() {
 	const [loaded, setLoaded] = useState(false)
 
+	useLayoutEffect(() => {
+		if ("scrollRestoration" in history) {
+			history.scrollRestoration = "manual"
+		}
+		window.scrollTo(0, 0)
+	}, [])
+
 	useEffect(() => {
 		// const img = new Image()
 		// img.src = "/hero/heroImg.webp"
@@ -43,7 +50,7 @@ function App() {
 			clearTimeout(refreshTimeout)
 			refreshTimeout = setTimeout(() => {
 				ScrollTrigger.refresh()
-			}, 100)
+			}, 0)
 		}
 
 		const images = document.images
