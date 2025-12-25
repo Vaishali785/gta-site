@@ -1,7 +1,7 @@
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all"
 import { ReactLenis } from "lenis/react"
-import { useEffect, useState } from "react"
+import { useEffect, useLayoutEffect, useState } from "react"
 import ClippedImageSection from "./components/ClippedImageSection"
 import ClosingSection from "./components/ClosingSection"
 import HeroWithBigImg from "./components/HeroWithBigImg"
