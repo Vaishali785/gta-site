@@ -21,10 +21,11 @@ const JasonDuvalVideo = () => {
 					scrollTrigger: {
 						trigger: "#videoSection",
 						start: "top top",
-						end: isMobile ? "+=1500" : "+=2300",
+						end: "+=2300",
 						scrub: true,
 						pin: true,
 						markers: { startColor: "white", endColor: "white" },
+						invalidateOnRefresh: true,
 					},
 				})
 
