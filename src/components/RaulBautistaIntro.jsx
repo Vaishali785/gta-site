@@ -21,6 +21,7 @@ const RaulBautistaIntro = () => {
 						start: "top 35%",
 						end: isTab ? "+=1000" : "+=1600",
 						scrub: true,
+						markers: { startColor: "pink", endColor: "pink" },
 					},
 				})
 
@@ -96,6 +97,7 @@ const RaulBautistaIntro = () => {
 						scrub: true,
 						anticipatePin: 1,
 						pinSpacing: true,
+						markers: { startColor: "red", endColor: "red" },
 					},
 				})
 
@@ -189,6 +191,8 @@ const RaulBautistaIntro = () => {
 						end: "+=800",
 						// pin: true,
 						scrub: true,
+						markers: { startColor: "white", endColor: "white" },
+
 						// anticipatePin: 1,
 						// pinSpacing: false,
 					},

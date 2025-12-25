@@ -24,6 +24,7 @@ const JasonDuvalVideo = () => {
 						end: isMobile ? "+=1500" : "+=2300",
 						scrub: true,
 						pin: true,
+						markers: { startColor: "white", endColor: "white" },
 					},
 				})
 
