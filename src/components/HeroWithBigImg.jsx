@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import React from "react"
 
-const HeroWithTimeline = () => {
+const HeroWithBigImg = () => {
 	// const masterTimeline = useMasterTimeline()
 	useGSAP(() => {
 		const tl = gsap.timeline({
@@ -12,7 +12,6 @@ const HeroWithTimeline = () => {
 				end: `bottom top+=30%`,
 				scrub: true,
 				pin: true,
-
 				// fastScrollEnd: 500,
 			},
 			// paused: true,
@@ -24,13 +23,26 @@ const HeroWithTimeline = () => {
 				position: "relative",
 			})
 		const scaleDownImg = () =>
+			gsap.fromTo(".images", { scale: 1.1 }, { scale: 1, ease: "circ.in" })
+		// gsap.fromTo(
+		// 	".under-img",
+		// 	{
+		// 		scale: 1.2,
+		// 		ease: "power2.inOut",
+		// 	},
+		// 	{ scale: 1, ease: "power2.inOut" }
+		// )
+
+		const fadeBgLogo = () =>
 			gsap.fromTo(
-				".under-img",
+				".bg-logo",
 				{
-					scale: 1.2,
-					ease: "power2.inOut",
+					opacity: 1,
 				},
-				{ scale: 1, ease: "power2.inOut" }
+				{
+					opacity: 0,
+					duration: 0.7,
+				}
 			)
 		const maskLogoImage = () =>
 			gsap.fromTo(
@@ -160,7 +172,8 @@ const HeroWithTimeline = () => {
 			)
 
 		tl.add(heroSection())
-			.add(scaleDownImg())
+			.add(scaleDownImg(), "-=0.1")
+			.add(fadeBgLogo(), "-=0.5")
 			.add(maskLogoImage(), "-=1.5")
 			.add(maskPositionChange(), "-=1")
 			.add(heroImgFadingOpacity(), "-=2")
@@ -248,7 +261,7 @@ const HeroWithTimeline = () => {
 
 	// still lags smooth effect
 	return (
-		<section id="hero-wrapper" className=" max-h-[1400px]">
+		<section id="hero-wrapper" className="max-h-[1200px]">
 			<div
 				id="hero"
 				className={`w-full h-screen z-40 flex items-center justify-center`}
@@ -259,7 +272,7 @@ const HeroWithTimeline = () => {
 						alt=""
 						className="vi-logo-img w-[225px] absolute top-1/6 left-1/2 -translate-x-1/2"
 					/>
-					<div className="masked-img bg-black">
+					<div className="masked-img bg-black images">
 						{/* <picture>
 							<source
 								media="(min-width:1020px)"
@@ -279,12 +292,12 @@ const HeroWithTimeline = () => {
 						{/* </picture> */}
 						<img
 							src="/hero/logoImg.webp"
-							className="absolute left-[0.5%] -top-[3%] z-[1]  "
+							className="absolute left-[5px] -top-[10px] z-[1]  bg-logo"
 						/>
 						<img
 							src="/hero/heroImg.webp"
 							alt="Jason and Lucia with logos"
-							className="object-center object-cover under-img"
+							className="object-center object-cover min-h-screen hero-bg-img under-img"
 						/>
 					</div>
 				</div>
@@ -294,8 +307,8 @@ const HeroWithTimeline = () => {
 					id="comingSoonContent"
 				>
 					<div className="font-extrabold text-8xl uppercase">Coming</div>
-					<div className="font-extrabold text-8xl uppercase">November 13</div>
-					<div className="font-extrabold text-8xl uppercase">2026</div>
+					<div className="font-extrabold text-8xl uppercase">December 25</div>
+					<div className="font-extrabold text-8xl uppercase">2025</div>
 				</div>
 
 				{/* <IntroText /> */}
@@ -305,4 +318,4 @@ const HeroWithTimeline = () => {
 	)
 }
 
-export default HeroWithTimeline
+export default HeroWithBigImg
