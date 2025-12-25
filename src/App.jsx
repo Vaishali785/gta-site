@@ -1,35 +1,56 @@
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all"
-import { ReactLenis, useLenis } from "lenis/react"
+import { ReactLenis } from "lenis/react"
+import { Suspense, useEffect, useState } from "react"
 import ClippedImageSection from "./components/ClippedImageSection"
 import ClosingSection from "./components/ClosingSection"
 import HeroWithBigImg from "./components/HeroWithBigImg"
 import IntroText from "./components/IntroText"
 import JasonDuvalVideo from "./components/JasonDuvalVideo"
 import JasonWithGunVideo from "./components/JasonWithGunVideo"
+import Loading from "./components/Loading"
 import Navbar from "./components/Navbar"
 import RaulBautistaIntro from "./components/RaulBautistaIntro"
+
+// const JasonDuvalVideo = lazy(() => import("./components/JasonDuvalVideo"))
+// const JasonWithGunVideo = lazy(() => import("./components/JasonWithGunVideo"))
+// const RaulBautistaIntro = lazy(() => import("./components/RaulBautistaIntro"))
+// const ClippedImageSection = lazy(() =>
+// 	import("./components/ClippedImageSection")
+// )
+// const ClosingSection = lazy(() => import("./components/ClosingSection"))
 
 // export const MasterTlContext = createContext(null)
 gsap.registerPlugin(ScrollTrigger)
 function App() {
-	const lenis = useLenis()
+	const [loaded, setLoaded] = useState(false)
 
+	useEffect(() => {
+		const img = new Image()
+		img.src = "/hero/heroImg.webp"
+
+		img.onload = () => setLoaded(true)
+	}, [])
+
+	if (!loaded) return <Loading />
 	return (
 		<div className="relative overflow-hidden" id="wrapper">
 			<ReactLenis
 				root
 				options={{ lerp: 0.2, smoothWheel: true, syncTouchLerp: 0.2 }}
 			/>
-
+			{/* <Suspense fallback={<Loading />}> */}
 			<Navbar />
 			<HeroWithBigImg />
 			<IntroText />
-			<JasonDuvalVideo />
-			<JasonWithGunVideo />
-			<ClippedImageSection />
-			<RaulBautistaIntro />
-			<ClosingSection />
+			<Suspense fallback={null}>
+				<JasonDuvalVideo />
+				<JasonWithGunVideo />
+				<ClippedImageSection />
+				<RaulBautistaIntro />
+				<ClosingSection />
+			</Suspense>
+			{/* </Suspense> */}
 		</div>
 	)
 }
