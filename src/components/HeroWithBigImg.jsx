@@ -50,7 +50,7 @@ const HeroWithBigImg = () => {
 							// maskPosition: "47% 41%",
 						},
 						{
-							maskSize: isMobile ? "45%" : isTab ? "18%" : "16%",
+							maskSize: isMobile ? "35%" : isTab ? "18%" : "16%",
 							// maskPosition: "50% 12%",
 							// opacity: 0.5,
 							background: "white",
@@ -67,7 +67,7 @@ const HeroWithBigImg = () => {
 						},
 						{
 							maskPosition: isMobile
-								? "50% 21dvh"
+								? "50% 20.7dvh"
 								: isTab
 								? "50% 20%"
 								: "50% 20.4%",
@@ -279,7 +279,7 @@ const HeroWithBigImg = () => {
 					<div className="masked-img bg-black images">
 						<img
 							src="/hero/logoImg.webp"
-							className="absolute left-[5px] -top-[10px] md:max-lg:top-[6.7vh] md:max-lg:left-[1.4vw] max-md:top-[29.5vh] max-md:scale-[2.8] max-md:left-[3.5vw] z-[1]  bg-logo"
+							className="absolute top-[4%] left-[1%] xl:left-[0.4%] xl:-top-[1%] md:max-lg:top-[6.7vh] md:max-lg:left-[1.4vw] max-md:top-[21.3vh] max-md:scale-[1.7] max-md:left-[2.1vw] z-[1]  bg-logo"
 						/>
 
 						<img
