@@ -9,17 +9,17 @@ const RaulBautistaIntro = () => {
 
 		mm.add(
 			{
-				isMobile: "(max-width: 750px)",
-				isTab: "(min-width: 751px  && max-width: 1023px)",
+				isMobile: "(max-width: 768px)",
+				isTab: "(min-width: 769px) and (max-width: 1023px)",
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
-				const { isMobile } = context.conditions
+				const { isMobile, isTab } = context.conditions
 				const raulTimeline = gsap.timeline({
 					scrollTrigger: {
 						trigger: "#raulBautistaSection",
 						start: "top 35%",
-						end: "+=1600",
+						end: isTab ? "+=1000" : "+=1600",
 						scrub: true,
 					},
 				})
@@ -91,7 +91,7 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#raulHalfVideo",
 						start: "top top",
-						end: "+=800",
+						end: isTab ? "+=1500" : "+=800",
 						pin: true,
 						scrub: true,
 						anticipatePin: 1,
@@ -227,14 +227,14 @@ const RaulBautistaIntro = () => {
 
 				<div
 					id="RaulIntroContent"
-					className="absolute top-0 grid grid-cols-12 max-md:block max-md:top-[40%] max-md:h-fit px-[var(--video-padding-inline)] gap-x-6 h-screen"
+					className="absolute top-0 grid grid-cols-12 max-md:block max-md:top-[40%] max-md:h-fit md:max-lg:px-[5vw] px-[var(--video-padding-inline)] gap-x-6 h-screen"
 				>
-					<div className="flex flex-col col-start-9  justify-center col-span-4 pt-[var(--video-padding-inline)] max-md:pt-0">
-						<h2 className="text-[90px] max-md:text-[15vh] LS-medium text-[#fff9cb] m-0 uppercase tracking-[1px] leading-[1]">
+					<div className="flex flex-col col-start-9 md:max-lg:col-start-8 md:max-lg:col-span-5  justify-center col-span-4 pt-[var(--video-padding-inline)] max-md:pt-0">
+						<h2 className="text-[90px] max-md:text-[15vh] md:max-lg:text-[80px] LS-medium text-[#fff9cb] m-0 uppercase tracking-[1px] leading-[1]">
 							Raul Bautista
 						</h2>
 						<div>
-							<p className="text-4xl kanit-semiboldd poppins-bold text-[#ffed95] my-5 tracking-[0.6px]">
+							<p className="text-4xl poppins-bold text-[#ffed95] my-5 tracking-[0.6px]">
 								Experience counts.
 							</p>
 							<p className="text-xl poppins-semibold text-white">
@@ -271,7 +271,7 @@ const RaulBautistaIntro = () => {
 
 			{/* half video */}
 			<section id="RaulHalfVideoSection" className="h-fit gap-x-6 ">
-				<div className="half relative h-fit grid grid-cols-12 max-md:grid-cols-6  px-[var(--video-padding-inline)]  gap-x-6 max-md:gap-x-2 max-md:px-5">
+				<div className="half relative h-fit grid grid-cols-12 max-md:grid-cols-6  px-[var(--video-padding-inline)] md:max-lg:px-[10vw] gap-x-6 md:max-lg:gap-x-2 max-md:gap-x-2 max-md:px-5">
 					<div
 						id="raulHalfVideo"
 						className="video w-[calc(100%_+var(--video-padding-inline))] min-h-screen col-start-7 col-span-6 max-md:col-start-1 max-md:w-full"
@@ -291,7 +291,7 @@ const RaulBautistaIntro = () => {
 						id="raulHalfText"
 					>
 						<p
-							className={`LS-medium uppercase text-7xl font-bold text-[#fff9cb] tracking-[1.2px]  quotes max-md:text-[11vw]`}
+							className={`LS-medium uppercase text-7xl md:max-lg:text-[54px] font-bold text-[#fff9cb] tracking-[1.2px]  quotes max-md:text-[11vw]`}
 						>
 							Life is full of surprises, my friend. I think we'd all be wise to
 							remember that.
@@ -316,10 +316,10 @@ const RaulBautistaIntro = () => {
 						/>
 
 						<div
-							className="w-[65%] pt-36 max-md:w-full max-md:py-8"
+							className="lg:w-[65%] pt-36 max-md:w-full max-md:py-8 md:max-lg:w-full"
 							id="textAfterRaulInCar"
 						>
-							<p className="text-4xl kanit-semiboldd poppins-bold text-[#ffed95] my-5 tracking-[1.1px] max-md:text-4xl">
+							<p className="text-4xl poppins-bold text-[#ffed95] my-5 tracking-[1.1px] max-md:text-4xl">
 								A professional adapts.
 							</p>
 							<p className="text-xl poppins-semibold text-white max-md:text-2xl">
