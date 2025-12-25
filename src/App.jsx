@@ -26,18 +26,40 @@ function App() {
 	const [loaded, setLoaded] = useState(false)
 
 	useEffect(() => {
-		const img = new Image()
-		img.src = "/hero/heroImg.webp"
+		// const img = new Image()
+		// img.src = "/hero/heroImg.webp"
 
-		img.onload = () => setLoaded(true)
+		// img.onload = () => setLoaded(true)
 
-		const onLoad = () => {
-			ScrollTrigger.refresh()
+		// const onLoad = () => {
+		// 	ScrollTrigger.refresh()
+		// }
+
+		// window.addEventListener("load", onLoad)
+
+		let refreshTimeout
+
+		const refresh = () => {
+			clearTimeout(refreshTimeout)
+			refreshTimeout = setTimeout(() => {
+				ScrollTrigger.refresh()
+			}, 100)
 		}
 
-		window.addEventListener("load", onLoad)
+		const images = document.images
+		for (let img of images) {
+			if (!img.complete) {
+				img.addEventListener("load", refresh)
+			}
+		}
 
-		return () => window.removeEventListener("load", onLoad)
+		const videos = document.querySelectorAll("video")
+		videos.forEach((video) => {
+			video.addEventListener("loadedmetadata", refresh)
+		})
+
+		setLoaded(true)
+		return () => clearTimeout(refreshTimeout)
 	}, [])
 
 	if (!loaded) return <Loading />
