@@ -207,11 +207,11 @@ const JasonDuvalVideo = () => {
 					</div>
 
 					<div className="right-side grid grid-cols-6 col-start-7 col-span-6  max-md:col-start-1 w-full max-md:w-fit max-md:overflow-hidden pt-[20vh] max-md:pt-0 gap-8">
-						<div className="w-[calc(100%_+var(--video-padding-inline))] max-md:w-[calc(100%_+var(--video-mobile-padding-inline))] col-start-1 col-span-6 h-fit">
+						<div className="w-[calc(100%_+var(--video-padding-inline))] h-full max-md:w-[calc(100%_+var(--video-mobile-padding-inline))] col-start-1 col-span-6">
 							<img
 								src="/jason-vid-section/Jason_Duval_02.jpg"
 								alt=""
-								className="object-cover aspect-square object-[5%_center] hover:border-4 hover:border-[#fff9cb]  max-md:-mx-5 transition-all duration-300 hover:cursor-pointer"
+								className="object-cover aspect-square h-full object-[5%_center] hover:border-4 hover:border-[#fff9cb]  max-md:-mx-5 transition-all duration-300 hover:cursor-pointer"
 							/>
 						</div>
 						<div className="col-start-1 col-span-5 max-md:min-w-[700px] max-md:h-fit max-md:flex  max-md:overflow-x-scroll">
