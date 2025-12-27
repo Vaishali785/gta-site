@@ -202,7 +202,7 @@ const JasonDuvalVideo = () => {
 						<img
 							src="/jason-vid-section/Jason_Duval_01.jpg"
 							alt=""
-							className="max-md:hidden col-start-2 col-span-5 aspect-[9/16] object-[80%_center] object-cover hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
+							className="max-md:hidden h-full col-start-2 col-span-5 aspect-[9/16] object-[80%_center] object-cover hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
 						/>
 					</div>
 
