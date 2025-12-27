@@ -96,6 +96,7 @@ const RaulBautistaIntro = () => {
 						scrub: true,
 						anticipatePin: 1,
 						pinSpacing: true,
+						markers: { startColor: "pink", endColor: "pink" },
 					},
 				})
 
