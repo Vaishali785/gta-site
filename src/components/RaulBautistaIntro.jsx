@@ -260,7 +260,7 @@ const RaulBautistaIntro = () => {
 				{/* two grid images */}
 				<div
 					id="RaulPics"
-					className="grid grid-cols-12 max-md:grid-cols-6 px-[var(--video-padding-inline)] max-md:pt-[70vh] gap-x-6 max-md:gap-x-3 leading-[1.3]  top-full raul-gradient-bg2 z-10 relative max-md:px-[var(--video-mobile-padding-inline)] max-md:hiddenn"
+					className="grid grid-cols-12 max-md:grid-cols-6 px-[var(--video-padding-inline)] max-sm:pt-[65vh] max-md:pt-[30vh] gap-x-6 max-md:gap-x-3 leading-[1.3]  top-full raul-gradient-bg2 z-10 relative max-md:px-[var(--video-mobile-padding-inline)] max-md:hiddenn"
 				>
 					{/* <div className="bg raul-gradient-bg w-screen h-screen -mx-[var(--video-padding-inline)] absolute top-full"></div> */}
 					<div className="w-[calc(100%_+var(--video-padding-inline))] -ml-[var(--video-padding-inline)] col-start-1 col-span-6 h-fit hover:cursor-pointer max-md:w-full max-md:ml-0 aspect-square">
@@ -270,11 +270,11 @@ const RaulBautistaIntro = () => {
 							className="object-cover aspect-square object-[70%_center] h-full hover:border-4 hover:border-[#fff9cb] transition-all duration-300 "
 						/>
 					</div>
-					<div className="right-img col-start-7 col-span-6 max-md:col-start-1 pt-[calc(var(--video-padding-inline)/1.5)] hover:cursor-pointer">
+					<div className="right-img col-start-7 col-span-6 max-md:col-start-1 pt-[calc(var(--video-padding-inline)/1.5)] pb-[63px] hover:cursor-pointer">
 						<img
 							src="/raul_bautista/Raul_Bautista_03.jpg"
 							alt=""
-							className="object-cover aspect-square  hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
+							className="object-cover aspect-square h-full hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
 						/>
 					</div>
 				</div>
