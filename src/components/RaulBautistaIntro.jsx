@@ -260,7 +260,7 @@ const RaulBautistaIntro = () => {
 				{/* two grid images */}
 				<div
 					id="RaulPics"
-					className="grid grid-cols-12 max-md:grid-cols-6 px-[var(--video-padding-inline)] max-md:pt-[30vh] gap-x-6 max-md:gap-x-3 leading-[1.3]  top-full raul-gradient-bg2 z-10 relative max-md:px-[var(--video-mobile-padding-inline)] max-md:hiddenn"
+					className="grid grid-cols-12 max-md:grid-cols-6 px-[var(--video-padding-inline)] max-sm:pt-[65vh] max-md:pt-[30vh] gap-x-6 max-md:gap-x-3 leading-[1.3]  top-full raul-gradient-bg2 z-10 relative max-md:px-[var(--video-mobile-padding-inline)] max-md:hiddenn"
 				>
 					{/* <div className="bg raul-gradient-bg w-screen h-screen -mx-[var(--video-padding-inline)] absolute top-full"></div> */}
 					<div className="w-[calc(100%_+var(--video-padding-inline))] -ml-[var(--video-padding-inline)] col-start-1 col-span-6 h-fit hover:cursor-pointer max-md:w-full max-md:ml-0 aspect-square">
