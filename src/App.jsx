@@ -1,7 +1,7 @@
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all"
 import { ReactLenis } from "lenis/react"
-import { useEffect, useLayoutEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import ClippedImageSection from "./components/ClippedImageSection"
 import ClosingSection from "./components/ClosingSection"
 import HeroWithBigImg from "./components/HeroWithBigImg"
@@ -25,12 +25,19 @@ gsap.registerPlugin(ScrollTrigger)
 function App() {
 	const [loaded, setLoaded] = useState(false)
 
-	useLayoutEffect(() => {
-		if ("scrollRestoration" in history) {
-			history.scrollRestoration = "manual"
-		}
-		window.scrollTo(0, 0)
-	}, [])
+	// useLayoutEffect(() => {
+	// 	if ("scrollRestoration" in history) {
+	// 		history.scrollRestoration = "manual"
+	// 	}
+	// 	window.scrollTo(0, 0)
+
+	// }, [])
+
+	// useLayoutEffect(() => {
+	// 	window.scrollTo(0, 0)
+	// 	ScrollTrigger.clearScrollMemory()
+	// 	ScrollTrigger.refresh(true)
+	// }, [])
 
 	useEffect(() => {
 		// const img = new Image()
@@ -44,32 +51,32 @@ function App() {
 
 		// window.addEventListener("load", onLoad)
 
-		let refreshTimeout
+		const images = Array.from(document.images)
+		const videos = Array.from(document.querySelectorAll("video"))
 
-		const refresh = () => {
-			clearTimeout(refreshTimeout)
-			refreshTimeout = setTimeout(() => {
-				ScrollTrigger.refresh()
-			}, 0)
-		}
+		const fontPromises = document.fonts.ready
 
-		const images = document.images
-		for (let img of images) {
-			if (!img.complete) {
-				img.addEventListener("load", refresh)
-			}
-		}
+		const imgPromises = images.map((img) =>
+			img.complete
+				? Promise.resolve()
+				: new Promise((res) => img.addEventListener("load", res))
+		)
 
-		const videos = document.querySelectorAll("video")
-		videos.forEach((video) => {
-			video.addEventListener("loadedmetadata", refresh)
+		const videoPromises = videos.map((v) =>
+			v.readyState >= 2
+				? Promise.resolve()
+				: new Promise((res) => v.addEventListener("loadedmetadata", res))
+		)
+
+		Promise.all([...imgPromises, ...videoPromises, fontPromises]).then(() => {
+			setLoaded(true)
 		})
-
-		setLoaded(true)
-		return () => clearTimeout(refreshTimeout)
 	}, [])
 
-	if (!loaded) return <Loading />
+	if (!loaded) {
+		console.log("loading...")
+		return <Loading />
+	}
 	return (
 		<div className="relative overflow-hidden" id="wrapper">
 			<ReactLenis
