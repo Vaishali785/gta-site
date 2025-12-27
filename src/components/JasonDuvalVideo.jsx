@@ -15,7 +15,6 @@ const JasonDuvalVideo = () => {
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
-				console.log(context.conditions)
 				let { isMobile } = context.conditions
 				const videoTimeline = gsap.timeline({
 					scrollTrigger: {
@@ -132,7 +131,6 @@ const JasonDuvalVideo = () => {
 						// .to("#video2Section", { zIndex: 41 }, "videoPlayLabel+=1.3")
 						.add(video2IncreaseOpacity(), "-=0.3")
 						.add(video2PositionFix(), "-=0.5")
-					// console.log(videoTimeline.totalDuration())
 				}
 
 				// Metadata already available?

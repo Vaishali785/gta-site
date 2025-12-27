@@ -31,7 +31,9 @@ body {
 	background: black;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar,
+::-moz-appearance,
+::-ms-overflow-style {
 	display: none;
 }
 

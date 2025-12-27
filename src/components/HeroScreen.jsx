@@ -28,7 +28,6 @@ const HeroScreen = ({ zIndex }) => {
 					heroRef.current.style.background = `linear-gradient(to bottom, black ${bgVal}%, transparent ${bgTransVal}%)` // this is required otherwise with simple bg property gsap converts black to rgba() and keep changing the opacity value with color stop
 				}
 				if (progress > 0.8 && direction == 1) {
-					console.log(">>progress", progress, 1 + doubleProgress)
 					hasComingSoonContentAnimated = true // otherwise the animation will keep repeating
 					gsap.to(
 						"#comingSoonContent",

@@ -13,7 +13,6 @@ const JasonWithGunVideo = () => {
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
-				console.log(context.conditions)
 				let { isMobile } = context.conditions
 
 				const videoTimeline2 = gsap.timeline({

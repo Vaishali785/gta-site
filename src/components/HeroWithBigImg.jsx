@@ -12,7 +12,6 @@ const HeroWithBigImg = () => {
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
-				console.log(context.conditions)
 				let { isMobile, isTab } = context.conditions
 				const tl = gsap.timeline({
 					scrollTrigger: {

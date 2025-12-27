@@ -22,7 +22,6 @@ const ClosingSection = () => {
 			gsap.to("#blackMask", { background: "rgba(0,0,0,.8)" })
 
 		lastVideoRef.current.addEventListener("loadedmetadata", () => {
-			console.log(lastVideoRef.current.duration)
 			lastVideoTl.fromTo(
 				lastVideoRef.current,
 				{
