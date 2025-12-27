@@ -165,7 +165,7 @@ const JasonDuvalVideo = () => {
 			<div id="videoSection" className="w-full  h-screen z-0 mask-video0">
 				<div className="w-full h-full mask-video" id="maskedVideo">
 					<video
-						src="/videos/jason_hugging.mp4"
+						src="/videos/output1.mp4"
 						muted
 						// loop
 						playsInline
