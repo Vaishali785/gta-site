@@ -96,6 +96,7 @@ const RaulBautistaIntro = () => {
 						scrub: true,
 						anticipatePin: 1,
 						pinSpacing: true,
+						markers: { startColor: "yellow", endColor: "yellow" },
 					},
 				})
 
@@ -172,8 +173,9 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#raulPics2",
 						start: "top 60%",
-						end: "+=400",
+						end: "+=800",
 						scrub: true,
+						markers: { startColor: "pink", endColor: "pink" },
 					},
 				})
 
