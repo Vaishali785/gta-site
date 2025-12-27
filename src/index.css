@@ -354,3 +354,11 @@ body {
 		/* transform: rotateY(180deg); */
 	}
 }
+
+.leonida-text {
+	font-size: clamp(4rem, 13vh, 8rem);
+}
+
+.leonida-sub-text {
+	font-size: clamp(1.5rem, 3.5vh, 2rem);
+}

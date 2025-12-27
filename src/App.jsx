@@ -1,7 +1,7 @@
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all"
 import { ReactLenis } from "lenis/react"
-import { Suspense, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import ClippedImageSection from "./components/ClippedImageSection"
 import ClosingSection from "./components/ClosingSection"
 import HeroWithBigImg from "./components/HeroWithBigImg"
@@ -25,14 +25,58 @@ gsap.registerPlugin(ScrollTrigger)
 function App() {
 	const [loaded, setLoaded] = useState(false)
 
-	useEffect(() => {
-		const img = new Image()
-		img.src = "/hero/heroImg.webp"
+	// useLayoutEffect(() => {
+	// 	if ("scrollRestoration" in history) {
+	// 		history.scrollRestoration = "manual"
+	// 	}
+	// 	window.scrollTo(0, 0)
 
-		img.onload = () => setLoaded(true)
+	// }, [])
+
+	// useLayoutEffect(() => {
+	// 	window.scrollTo(0, 0)
+	// 	ScrollTrigger.clearScrollMemory()
+	// 	ScrollTrigger.refresh(true)
+	// }, [])
+
+	useEffect(() => {
+		// const img = new Image()
+		// img.src = "/hero/heroImg.webp"
+
+		// img.onload = () => setLoaded(true)
+
+		// const onLoad = () => {
+		// 	ScrollTrigger.refresh()
+		// }
+
+		// window.addEventListener("load", onLoad)
+
+		const images = Array.from(document.images)
+		const videos = Array.from(document.querySelectorAll("video"))
+
+		const fontPromises = document.fonts.ready
+
+		const imgPromises = images.map((img) =>
+			img.complete
+				? Promise.resolve()
+				: new Promise((res) => img.addEventListener("load", res))
+		)
+
+		const videoPromises = videos.map((v) =>
+			v.readyState >= 2
+				? Promise.resolve()
+				: new Promise((res) => v.addEventListener("loadedmetadata", res))
+		)
+
+		Promise.all([...imgPromises, ...videoPromises, fontPromises]).then(() => {
+			setLoaded(true)
+		})
 	}, [])
 
-	if (!loaded) return <Loading />
+	if (!loaded) {
+		console.log("loading...")
+		return <Loading />
+	}
 	return (
 		<div className="relative overflow-hidden" id="wrapper">
 			<ReactLenis
@@ -43,13 +87,13 @@ function App() {
 			<Navbar />
 			<HeroWithBigImg />
 			<IntroText />
-			<Suspense fallback={null}>
-				<JasonDuvalVideo />
-				<JasonWithGunVideo />
-				<ClippedImageSection />
-				<RaulBautistaIntro />
-				<ClosingSection />
-			</Suspense>
+			{/* <Suspense fallback={null}> */}
+			<JasonDuvalVideo />
+			<JasonWithGunVideo />
+			<ClippedImageSection />
+			<RaulBautistaIntro />
+			<ClosingSection />
+			{/* </Suspense> */}
 			{/* </Suspense> */}
 		</div>
 	)
