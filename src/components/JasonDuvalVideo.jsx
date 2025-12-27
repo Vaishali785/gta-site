@@ -10,8 +10,8 @@ const JasonDuvalVideo = () => {
 		const mm = gsap.matchMedia()
 		mm.add(
 			{
-				isMobile: "(max-width: 750px)",
-				isTab: "(min-width: 751px) and (max-width: 1023px)",
+				isMobile: "(max-width: 768px)",
+				isTab: "(min-width: 769px) and (max-width: 1023px)",
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
@@ -21,9 +21,12 @@ const JasonDuvalVideo = () => {
 					scrollTrigger: {
 						trigger: "#videoSection",
 						start: "top top",
-						end: isMobile ? "+=1500" : "+=2300",
+						end: "+=2300",
 						scrub: true,
 						pin: true,
+						markers: { startColor: "white", endColor: "white" },
+						invalidateOnRefresh: true,
+						refreshPriority: 1,
 					},
 				})
 
@@ -199,16 +202,16 @@ const JasonDuvalVideo = () => {
 						<img
 							src="/jason-vid-section/Jason_Duval_01.jpg"
 							alt=""
-							className="max-md:hidden col-start-2 col-span-5 aspect-[9/16] object-[80%_center] object-cover hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
+							className="max-md:hidden h-full col-start-2 col-span-5 aspect-[9/16] object-[80%_center] object-cover hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
 						/>
 					</div>
 
 					<div className="right-side grid grid-cols-6 col-start-7 col-span-6  max-md:col-start-1 w-full max-md:w-fit max-md:overflow-hidden pt-[20vh] max-md:pt-0 gap-8">
-						<div className="w-[calc(100%_+var(--video-padding-inline))] max-md:w-[calc(100%_+var(--video-mobile-padding-inline))] col-start-1 col-span-6 h-fit">
+						<div className="w-[calc(100%_+var(--video-padding-inline))] h-full max-md:w-[calc(100%_+var(--video-mobile-padding-inline))] col-start-1 col-span-6">
 							<img
 								src="/jason-vid-section/Jason_Duval_02.jpg"
 								alt=""
-								className="object-cover aspect-square object-[5%_center] hover:border-4 hover:border-[#fff9cb]  max-md:-mx-5 transition-all duration-300 hover:cursor-pointer"
+								className="object-cover aspect-square h-full object-[5%_center] hover:border-4 hover:border-[#fff9cb]  max-md:-mx-5 transition-all duration-300 hover:cursor-pointer"
 							/>
 						</div>
 						<div className="col-start-1 col-span-5 max-md:min-w-[700px] max-md:h-fit max-md:flex  max-md:overflow-x-scroll">

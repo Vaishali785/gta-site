@@ -8,8 +8,8 @@ const JasonWithGunVideo = () => {
 		const mm = gsap.matchMedia()
 		mm.add(
 			{
-				isMobile: "(max-width: 750px)",
-				isTab: "(min-width: 751px) and (max-width: 1023px)",
+				isMobile: "(max-width: 768px)",
+				isTab: "(min-width: 769px) and (max-width: 1023px)",
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
@@ -23,6 +23,8 @@ const JasonWithGunVideo = () => {
 						end: "+=3000",
 						scrub: true,
 						pin: true,
+						markers: { startColor: "yellow", endColor: "yellow" },
+						invalidateOnRefresh: true,
 					},
 				})
 

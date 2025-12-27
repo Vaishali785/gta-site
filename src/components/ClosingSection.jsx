@@ -12,7 +12,8 @@ const ClosingSection = () => {
 				end: "+=1300",
 				pin: true,
 				scrub: true,
-				markers: true,
+				markers: { startColor: "grey", endColor: "grey" },
+				invalidateOnRefresh: true,
 			},
 		})
 

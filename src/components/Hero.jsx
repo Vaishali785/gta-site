@@ -11,6 +11,7 @@ const Hero = () => {
 				end: "bottom 90%",
 				scrub: 1.4,
 				pin: true,
+				invalidateOnRefresh: true,
 			},
 			opacity: 0,
 		})
