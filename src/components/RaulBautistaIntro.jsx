@@ -100,6 +100,9 @@ const RaulBautistaIntro = () => {
 						pinSpacing: true,
 						markers: { startColor: "red", endColor: "red" },
 						invalidateOnRefresh: true,
+						onRefreshInit: () => {
+							window.scrollTo(0, 0)
+						},
 					},
 				})
 
