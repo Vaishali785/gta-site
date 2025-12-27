@@ -188,7 +188,7 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#postcard",
 						start: "top 30%",
-						end: "+=600",
+						end: "+=1000",
 						// pin: true,
 						scrub: true,
 						markers: { startColor: "red", endColor: "red" },
