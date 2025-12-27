@@ -19,7 +19,7 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#raulBautistaSection",
 						start: "top 35%",
-						end: isTab ? "+=1000" : "+=1600",
+						end: isTab ? "+=1000" : "+=1800",
 						scrub: true,
 					},
 				})
