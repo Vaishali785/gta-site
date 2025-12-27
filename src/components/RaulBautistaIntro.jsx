@@ -186,9 +186,10 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#postcard",
 						start: "top 30%",
-						end: "+=800",
+						end: "+=1000",
 						// pin: true,
 						scrub: true,
+						markers: { startColor: "red", endColor: "red" },
 						// anticipatePin: 1,
 						// pinSpacing: false,
 					},
@@ -252,18 +253,18 @@ const RaulBautistaIntro = () => {
 					className="grid grid-cols-12 max-md:grid-cols-6 px-[var(--video-padding-inline)] max-md:pt-[30vh] gap-x-6 max-md:gap-x-3 leading-[1.3]  top-full raul-gradient-bg2 z-10 relative max-md:px-[var(--video-mobile-padding-inline)] max-md:hiddenn"
 				>
 					{/* <div className="bg raul-gradient-bg w-screen h-screen -mx-[var(--video-padding-inline)] absolute top-full"></div> */}
-					<div className="w-[calc(100%_+var(--video-padding-inline))] -ml-[var(--video-padding-inline)] col-start-1 col-span-6 h-fit hover:cursor-pointer max-md:w-full max-md:ml-0">
+					<div className="w-[calc(100%_+var(--video-padding-inline))] -ml-[var(--video-padding-inline)] col-start-1 col-span-6 h-fit hover:cursor-pointer max-md:w-full max-md:ml-0  aspect-square">
 						<img
 							src="/raul_bautista/Raul_Bautista_01.jpg"
 							alt=""
-							className="object-cover aspect-square object-[70%_center] hover:border-4 hover:border-[#fff9cb] transition-all duration-300 "
+							className="object-cover aspect-square object-[70%_center]  h-full hover:border-4 hover:border-[#fff9cb] transition-all duration-300 "
 						/>
 					</div>
-					<div className="right-img col-start-7 col-span-6 max-md:col-start-1 pt-[calc(var(--video-padding-inline)/1.5)] hover:cursor-pointer">
+					<div className="right-img col-start-7 col-span-6 max-md:col-start-1 pt-[calc(var(--video-padding-inline)/1.5)] pb-[63px]  hover:cursor-pointer">
 						<img
 							src="/raul_bautista/Raul_Bautista_03.jpg"
 							alt=""
-							className="object-cover aspect-square  hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
+							className="object-cover aspect-square h-full hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
 						/>
 					</div>
 				</div>
@@ -336,7 +337,7 @@ const RaulBautistaIntro = () => {
 						<img
 							src="/raul_bautista/Raul_Bautista_04.jpg"
 							alt=""
-							className="object-cover aspect-9/16  hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
+							className="object-cover aspect-9/16 h-[70%] hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
 						/>
 					</div>
 				</div>
@@ -344,7 +345,7 @@ const RaulBautistaIntro = () => {
 
 			<section
 				id="postcard"
-				className="postcard-section px-[15vw] pt-[13vw]  min-h-screen w-full max-md:px-[5vw] max-md:min-h-5/6 max-md:pb-[15vh]"
+				className="postcard-section px-[15vw] py-[7vw]  min-h-screen w-full max-md:px-[5vw] max-md:min-h-5/6 max-md:pb-[15vh]"
 			>
 				<div className="postcard overflow-hidden relative scale-95 hover:rotate-[0.5deg] hover:brightness-110 hover:scale-100 transition-all duration-700 hover:cursor-pointer max-md:scale-100">
 					<img
