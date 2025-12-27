@@ -188,12 +188,12 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#postcard",
 						start: "top 30%",
-						end: "+=1000",
+						end: "+=600",
 						// pin: true,
 						scrub: true,
 						markers: { startColor: "red", endColor: "red" },
-						// anticipatePin: 1,
-						// pinSpacing: false,
+						anticipatePin: 1,
+						pinSpacing: false,
 					},
 				})
 
