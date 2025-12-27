@@ -100,11 +100,11 @@ const ClippedImageSection = () => {
 				id="clippedImgText"
 				className="clip-text flex max-md:flex-col h-[95vh] w-full justify-center items-center gap-40 md:max-lg:gap-20 max-md:gap-[60px] mx-auto bg-black gradient-text orangish-gradient z-[41] -my-[10vh]"
 			>
-				<div className="w-1/3 text-8xl font-semibold max-md:w-5/6 md:max-lg:w-2/5 poppins-extrabold">
+				<div className="leonida-text w-1/3 font-semibold max-md:w-5/6 md:max-lg:w-2/5 poppins-extrabold">
 					<div>Only in</div>
 					<div>Leonida</div>
 				</div>
-				<div className="w-1/5 max-md:w-3/4 md:max-lg:w-1/3 text-3xl poppins-semibold">
+				<div className="leonida-sub-text w-1/5 max-md:w-3/4 md:max-lg:w-1/3 poppins-semibold">
 					<p>
 						When the sun fades and the neon glows, everyone has something to
 						gain - and more to lose.

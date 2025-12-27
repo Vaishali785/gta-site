@@ -194,7 +194,7 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#postcard",
 						start: "top 30%",
-						end: "+=800",
+						end: "+=1000",
 						// pin: true,
 						scrub: true,
 						markers: { startColor: "white", endColor: "white" },
@@ -355,7 +355,7 @@ const RaulBautistaIntro = () => {
 
 			<section
 				id="postcard"
-				className="postcard-section px-[15vw] pt-[13vw]  min-h-screen w-full max-md:px-[5vw] max-md:min-h-5/6 max-md:pb-[15vh]"
+				className="postcard-section px-[15vw] pt-[13vw] pb-[20vh]  min-h-screen w-full max-md:px-[5vw] max-md:min-h-5/6 max-md:pb-[15vh]"
 			>
 				<div className="postcard overflow-hidden relative scale-95 hover:rotate-[0.5deg] hover:brightness-110 hover:scale-100 transition-all duration-700 hover:cursor-pointer max-md:scale-100">
 					<img
