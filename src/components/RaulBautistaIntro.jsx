@@ -121,7 +121,7 @@ const RaulBautistaIntro = () => {
 						},
 						{
 							y: "-25px",
-							duration: 1,
+							duration: 2,
 							delay: 2,
 						}
 					)
