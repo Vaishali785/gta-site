@@ -20,7 +20,6 @@ const HeroWithBigImg = () => {
 						end: `bottom top+=30%`,
 						scrub: true,
 						pin: true,
-						markers: { startColor: "blue", endColor: "blue" },
 					},
 				})
 				const heroSection = () =>

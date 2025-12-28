@@ -22,7 +22,6 @@ const RaulBautistaIntro = () => {
 						start: isSmallMobile ? "top 50%" : "top 35%",
 						end: isTab ? "+=1000" : isSmallMobile ? "+=1200" : "+=1800",
 						scrub: true,
-						markers: { startColor: "purple", endColor: "purple" },
 					},
 				})
 
@@ -98,7 +97,6 @@ const RaulBautistaIntro = () => {
 						scrub: true,
 						anticipatePin: 1,
 						pinSpacing: true,
-						markers: { startColor: "yellow", endColor: "yellow" },
 					},
 				})
 
@@ -177,7 +175,6 @@ const RaulBautistaIntro = () => {
 						start: "top 70%",
 						end: isSmallMobile ? "+=400" : "+=800",
 						scrub: true,
-						markers: { startColor: "pink", endColor: "pink" },
 					},
 				})
 
@@ -193,7 +190,6 @@ const RaulBautistaIntro = () => {
 						end: isSmallMobile ? "+=400" : "+=1000",
 						// pin: true,
 						scrub: true,
-						markers: { startColor: "red", endColor: "red" },
 						anticipatePin: 1,
 						pinSpacing: false,
 					},

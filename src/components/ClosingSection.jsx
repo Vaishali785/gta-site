@@ -23,7 +23,6 @@ const ClosingSection = () => {
 						end: isSmallMobile ? "+=700" : "+=1300", // not working -> 1500, 800, 1000, 600, 400, 2400(too early)
 						pin: true,
 						scrub: true,
-						markers: { startColor: "white", endColor: "white" },
 					},
 				})
 
