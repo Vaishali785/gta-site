@@ -23,7 +23,7 @@ const ClosingSection = () => {
 						end: isSmallMobile ? "+=800" : "+=1300",
 						pin: true,
 						scrub: true,
-						markers: true,
+						markers: { startColor: "white", endColor: "white" },
 					},
 				})
 
