@@ -175,7 +175,7 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#raulPics2",
 						start: "top 70%",
-						end: isSmallMobile ? "+=400" : "+=700",
+						end: isSmallMobile ? "+=400" : "+=800",
 						scrub: true,
 						markers: { startColor: "pink", endColor: "pink" },
 					},
@@ -189,8 +189,8 @@ const RaulBautistaIntro = () => {
 				const postcardTL = gsap.timeline({
 					scrollTrigger: {
 						trigger: "#postcard",
-						start: "top 30%",
-						end: isSmallMobile ? "+=400" : "+=1000",
+						start: isSmallMobile ? "top 30%" : "top 35%",
+						end: isSmallMobile ? "+=400" : "+=1200",
 						// pin: true,
 						scrub: true,
 						markers: { startColor: "red", endColor: "red" },
