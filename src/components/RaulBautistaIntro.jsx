@@ -19,10 +19,10 @@ const RaulBautistaIntro = () => {
 				const raulTimeline = gsap.timeline({
 					scrollTrigger: {
 						trigger: "#raulBautistaSection",
-						start: "top 35%",
+						start: isSmallMobile ? "top 50%" : "top 35%",
 						end: isTab ? "+=1000" : "+=1800",
 						scrub: true,
-						marker: { startColor: "purple", endColor: "purple" },
+						marker: { startColor: "brown", endColor: "brown" },
 					},
 				})
 
