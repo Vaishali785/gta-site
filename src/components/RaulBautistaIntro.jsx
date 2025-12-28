@@ -190,7 +190,7 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#postcard",
 						start: isSmallMobile ? "top 30%" : "top 35%",
-						end: isSmallMobile ? "+=400" : "+=1200",
+						end: isSmallMobile ? "+=400" : "+=1000",
 						// pin: true,
 						scrub: true,
 						markers: { startColor: "red", endColor: "red" },
