@@ -20,7 +20,7 @@ const ClosingSection = () => {
 					scrollTrigger: {
 						trigger: "#lastSection",
 						start: "top top",
-						end: isSmallMobile ? "+=1000" : "+=1300",
+						end: isSmallMobile ? "+=800" : "+=1300",
 						pin: true,
 						scrub: true,
 						markers: true,
