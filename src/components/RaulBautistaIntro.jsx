@@ -228,7 +228,7 @@ const RaulBautistaIntro = () => {
 
 				<div
 					id="RaulIntroContent"
-					className="absolute top-0 grid grid-cols-12 max-md:block max-md:top-[40%] max-md:h-fit md:max-lg:px-[5vw] px-[var(--video-padding-inline)] gap-x-6 h-screen max-sm:top-3/5"
+					className="absolute top-0 grid grid-cols-12 max-md:block max-md:top-[32%] max-md:h-fit md:max-lg:px-[5vw] px-[var(--video-padding-inline)] gap-x-6 h-screen max-sm:top-3/5"
 				>
 					<div className="flex flex-col col-start-9 md:max-lg:col-start-8 md:max-lg:col-span-5  justify-center col-span-4 pt-[var(--video-padding-inline)] max-md:pt-0">
 						<h2 className="text-[90px] max-md:text-[15vh] md:max-lg:text-[80px] LS-medium text-[#fff9cb] m-0 uppercase tracking-[1px] leading-[1] max-sm:text-[12vh]">
