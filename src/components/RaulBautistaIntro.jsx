@@ -22,7 +22,7 @@ const RaulBautistaIntro = () => {
 						start: isSmallMobile ? "top 50%" : "top 35%",
 						end: isTab ? "+=1000" : "+=1800",
 						scrub: true,
-						marker: { startColor: "brown", endColor: "brown" },
+						markers: { startColor: "purple", endColor: "purple" },
 					},
 				})
 
