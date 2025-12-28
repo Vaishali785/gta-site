@@ -22,6 +22,7 @@ const RaulBautistaIntro = () => {
 						start: "top 35%",
 						end: isTab ? "+=1000" : "+=1800",
 						scrub: true,
+						marker: { startColor: "black", endColor: "black" },
 					},
 				})
 

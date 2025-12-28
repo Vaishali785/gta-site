@@ -22,6 +22,7 @@ const JasonWithGunVideo = () => {
 						end: "+=3000",
 						scrub: true,
 						pin: true,
+						markers: { startColor: "green", endColor: "green" },
 					},
 				})
 
