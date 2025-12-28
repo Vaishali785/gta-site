@@ -336,7 +336,7 @@ const RaulBautistaIntro = () => {
 					</div>
 					<div
 						id="raulInSuitImg"
-						className="right-img col-start-7 col-span-5 pt-10 translate-y-2.5 max-sm:pt-0 max-sm:pb-10"
+						className="right-img col-start-7 col-span-5 pt-10 translate-y-2.5 max-sm:pt-0 max-sm:pb-10 max-sm:hidden"
 					>
 						<img
 							src="/raul_bautista/Raul_Bautista_04.jpg"
