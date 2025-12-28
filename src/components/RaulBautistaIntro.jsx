@@ -9,12 +9,13 @@ const RaulBautistaIntro = () => {
 
 		mm.add(
 			{
+				isSmallMobile: "(max-width: 550px)",
 				isMobile: "(max-width: 768px)",
 				isTab: "(min-width: 769px) and (max-width: 1023px)",
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
-				const { isMobile, isTab } = context.conditions
+				const { isSmallMobile, isMobile, isTab } = context.conditions
 				const raulTimeline = gsap.timeline({
 					scrollTrigger: {
 						trigger: "#raulBautistaSection",
@@ -172,8 +173,8 @@ const RaulBautistaIntro = () => {
 				const afterHalfVideoTl = gsap.timeline({
 					scrollTrigger: {
 						trigger: "#raulPics2",
-						start: "top 60%",
-						end: "+=800",
+						start: "top 70%",
+						end: "+=400",
 						scrub: true,
 						markers: { startColor: "pink", endColor: "pink" },
 					},
@@ -188,7 +189,7 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#postcard",
 						start: "top 30%",
-						end: "+=1000",
+						end: isSmallMobile ? "+=1500" : "+=1000",
 						// pin: true,
 						scrub: true,
 						markers: { startColor: "red", endColor: "red" },
@@ -230,10 +231,10 @@ const RaulBautistaIntro = () => {
 
 				<div
 					id="RaulIntroContent"
-					className="absolute top-0 grid grid-cols-12 max-md:block max-md:top-[40%] max-md:h-fit md:max-lg:px-[5vw] px-[var(--video-padding-inline)] gap-x-6 h-screen"
+					className="absolute top-0 grid grid-cols-12 max-md:block max-md:top-[40%] max-md:h-fit md:max-lg:px-[5vw] px-[var(--video-padding-inline)] gap-x-6 h-screen max-sm:top-3/5"
 				>
 					<div className="flex flex-col col-start-9 md:max-lg:col-start-8 md:max-lg:col-span-5  justify-center col-span-4 pt-[var(--video-padding-inline)] max-md:pt-0">
-						<h2 className="text-[90px] max-md:text-[15vh] md:max-lg:text-[80px] LS-medium text-[#fff9cb] m-0 uppercase tracking-[1px] leading-[1]">
+						<h2 className="text-[90px] max-md:text-[15vh] md:max-lg:text-[80px] LS-medium text-[#fff9cb] m-0 uppercase tracking-[1px] leading-[1] max-sm:text-[12vh]">
 							Raul Bautista
 						</h2>
 						<div>
@@ -252,17 +253,17 @@ const RaulBautistaIntro = () => {
 				{/* two grid images */}
 				<div
 					id="RaulPics"
-					className="grid grid-cols-12 max-md:grid-cols-6 px-[var(--video-padding-inline)] max-md:pt-[30vh] gap-x-6 max-md:gap-x-3 leading-[1.3]  top-full raul-gradient-bg2 z-10 relative max-md:px-[var(--video-mobile-padding-inline)] max-md:hiddenn"
+					className="grid grid-cols-12 max-md:grid-cols-6 px-[var(--video-padding-inline)] max-md:pt-[30vh] gap-x-6 max-md:gap-x-3 leading-[1.3]  top-full raul-gradient-bg2 z-10 relative max-md:px-[var(--video-mobile-padding-inline)] max-md:hiddenn max-sm:flex max-sm:px-5 "
 				>
 					{/* <div className="bg raul-gradient-bg w-screen h-screen -mx-[var(--video-padding-inline)] absolute top-full"></div> */}
-					<div className="w-[calc(100%_+var(--video-padding-inline))] -ml-[var(--video-padding-inline)] col-start-1 col-span-6 h-fit hover:cursor-pointer max-md:w-full max-md:ml-0  aspect-square">
+					<div className="w-[calc(100%_+var(--video-padding-inline))] -ml-[var(--video-padding-inline)] col-start-1 col-span-6 h-fit hover:cursor-pointer max-md:w-full max-md:ml-0  aspect-square am:max-md:flex-1 max-sm:w-1/2">
 						<img
 							src="/raul_bautista/Raul_Bautista_01.jpg"
 							alt=""
 							className="object-cover aspect-square object-[70%_center]  h-full hover:border-4 hover:border-[#fff9cb] transition-all duration-300 "
 						/>
 					</div>
-					<div className="right-img col-start-7 col-span-6 max-md:col-start-1 pt-[calc(var(--video-padding-inline)/1.5)] pb-[63px]  hover:cursor-pointer">
+					<div className="right-img col-start-7 col-span-6 max-md:col-start-1 pt-[calc(var(--video-padding-inline)/1.5)] pb-[63px]  hover:cursor-pointer max-sm:flex-1 max-sm:py-0">
 						<img
 							src="/raul_bautista/Raul_Bautista_03.jpg"
 							alt=""
@@ -334,12 +335,12 @@ const RaulBautistaIntro = () => {
 					</div>
 					<div
 						id="raulInSuitImg"
-						className="right-img col-start-7 col-span-5 pt-10 translate-y-2.5 max-md:hidden"
+						className="right-img col-start-7 col-span-5 pt-10 translate-y-2.5 max-sm:pt-0 max-sm:pb-10"
 					>
 						<img
 							src="/raul_bautista/Raul_Bautista_04.jpg"
 							alt=""
-							className="object-cover aspect-9/16 h-[70%] hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
+							className="object-cover aspect-9/16 h-[70%] hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer max-sm:h-[50vh] max-sm:w-full"
 						/>
 					</div>
 				</div>

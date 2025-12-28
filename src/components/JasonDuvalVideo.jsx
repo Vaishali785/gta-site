@@ -209,16 +209,16 @@ const JasonDuvalVideo = () => {
 								className="object-cover aspect-square h-full object-[5%_center] hover:border-4 hover:border-[#fff9cb]  max-md:-mx-5 transition-all duration-300 hover:cursor-pointer"
 							/>
 						</div>
-						<div className="col-start-1 col-span-5 max-md:min-w-[700px] max-md:h-fit max-md:flex  max-md:overflow-x-scroll">
+						<div className="col-start-1 col-span-5 max-md:min-w-[700px] max-md:h-fit max-md:flex  max-md:overflow-x-scroll max-sm:flex-col max-sm:gap-4">
 							<img
 								src="/jason-vid-section/Jason_Duval_06.jpg"
 								alt=""
-								className="object-cover max-md:aspect-[9/16] aspect-square flex-1 w-[350px] hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
+								className="object-cover max-md:aspect-[9/16] aspect-square flex-1 w-[350px] hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer max-sm:object-contain max-sm:aspect-auto max-sm:flex-1 max-sm:w-full "
 							/>
 							<img
 								src="/jason-vid-section/Jason_Duval_01.jpg"
 								alt=""
-								className="md:hidden flex-1 aspect-[9/16] object-[80%_center] object-cover w-[350px] hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
+								className="md:hidden flex-1 aspect-[9/16] object-[80%_center] object-cover w-[350px] hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer max-sm:object-contain max-sm:aspect-auto max-sm:flex-1 max-sm:w-full max-sm:hidden"
 							/>
 						</div>
 					</div>

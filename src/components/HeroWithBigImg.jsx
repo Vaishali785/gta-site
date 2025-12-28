@@ -278,7 +278,7 @@ const HeroWithBigImg = () => {
 					<div className="masked-img bg-black images">
 						<img
 							src="/hero/logoImg.webp"
-							className="absolute left-[5px] -top-[10px] md:max-lg:top-[6.7vh] md:max-lg:left-[1.4vw] max-md:top-[29.5vh] max-md:scale-[2.8] max-md:left-[3.5vw] z-[1]  bg-logo"
+							className="absolute left-[5px] -top-[10px] md:max-lg:top-[6.7vh] md:max-lg:left-[1.4vw] max-md:top-[29.5vh] max-md:scale-[2.8] max-md:left-[3.5vw] z-[1]  bg-logo max-sm:scale-[1.8] max-sm:top-[23.5vh]"
 						/>
 
 						<img
