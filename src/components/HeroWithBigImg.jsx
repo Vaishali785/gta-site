@@ -297,7 +297,7 @@ const HeroWithBigImg = () => {
 						Coming
 					</div>
 					<div className="max-md:poppins-bold font-extrabold max-md:text-[11vw] md:max-lg:text-[10vh] text-8xl uppercase">
-						December 25
+						December 30
 					</div>
 					<div className="max-md:poppins-bold font-extrabold max-md:text-[11vw] md:max-lg:text-[10vh] text-8xl uppercase">
 						2025
