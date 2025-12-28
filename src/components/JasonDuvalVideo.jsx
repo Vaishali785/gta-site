@@ -209,7 +209,7 @@ const JasonDuvalVideo = () => {
 								className="object-cover aspect-square h-full object-[5%_center] hover:border-4 hover:border-[#fff9cb]  max-md:-mx-5 transition-all duration-300 hover:cursor-pointer"
 							/>
 						</div>
-						<div className="col-start-1 col-span-5 max-md:min-w-[700px] max-md:h-fit max-md:flex  max-md:overflow-x-scroll max-sm:flex-col max-sm:gap-4">
+						<div className="col-start-1 col-span-5 max-md:min-w-[90vw] max-md:h-fit max-md:flex  max-md:gap-4 max-sm:flex-col">
 							<img
 								src="/jason-vid-section/Jason_Duval_06.jpg"
 								alt=""
