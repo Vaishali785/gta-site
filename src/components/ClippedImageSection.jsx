@@ -12,7 +12,7 @@ const ClippedImageSection = () => {
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
-				let { isMobile, isTab, isLaptop } = context.conditions
+				let { isTab } = context.conditions
 				const clippedTimeline = gsap.timeline({
 					scrollTrigger: {
 						trigger: "#clipped-img-section",
@@ -97,7 +97,7 @@ const ClippedImageSection = () => {
 				id="clippedImgText"
 				className="clip-text flex max-md:flex-col h-[95vh] w-full justify-center items-center gap-40 md:max-lg:gap-20 max-md:gap-[60px] mx-auto bg-black gradient-text orangish-gradient z-[41] -my-[10vh]"
 			>
-				<div className="w-1/3 text-8xl font-semibold max-md:w-5/6 md:max-lg:w-2/5 poppins-extrabold">
+				<div className="w-1/3 text-8xl font-semibold max-md:w-1/2 md:max-lg:w-2/5 poppins-extrabold max-sm:text-6xl max-sm:w-1/2 max-md:text-7xl ">
 					<div>Only in</div>
 					<div>Leonida</div>
 				</div>

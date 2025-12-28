@@ -165,7 +165,7 @@ const JasonDuvalVideo = () => {
 			<div id="videoSection" className="w-full  h-screen z-0 mask-video0">
 				<div className="w-full h-full mask-video" id="maskedVideo">
 					<video
-						src="/videos/jason_hugging.mp4"
+						src="/videos/output1.mp4"
 						muted
 						// loop
 						playsInline
@@ -197,28 +197,28 @@ const JasonDuvalVideo = () => {
 						<img
 							src="/jason-vid-section/Jason_Duval_01.jpg"
 							alt=""
-							className="max-md:hidden col-start-2 col-span-5 aspect-[9/16] object-[80%_center] object-cover hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
+							className="max-md:hidden col-start-2 h-full col-span-5 aspect-[9/16] object-[80%_center] object-cover hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
 						/>
 					</div>
 
 					<div className="right-side grid grid-cols-6 col-start-7 col-span-6  max-md:col-start-1 w-full max-md:w-fit max-md:overflow-hidden pt-[20vh] max-md:pt-0 gap-8">
-						<div className="w-[calc(100%_+var(--video-padding-inline))] max-md:w-[calc(100%_+var(--video-mobile-padding-inline))] col-start-1 col-span-6 h-fit">
+						<div className="w-[calc(100%_+var(--video-padding-inline))] max-md:w-[calc(100%_+var(--video-mobile-padding-inline))] h-full col-start-1 col-span-6 h-fit">
 							<img
 								src="/jason-vid-section/Jason_Duval_02.jpg"
 								alt=""
-								className="object-cover aspect-square object-[5%_center] hover:border-4 hover:border-[#fff9cb]  max-md:-mx-5 transition-all duration-300 hover:cursor-pointer"
+								className="object-cover aspect-square h-full object-[5%_center] hover:border-4 hover:border-[#fff9cb]  max-md:-mx-5 transition-all duration-300 hover:cursor-pointer"
 							/>
 						</div>
-						<div className="col-start-1 col-span-5 max-md:min-w-[700px] max-md:h-fit max-md:flex  max-md:overflow-x-scroll">
+						<div className="col-start-1 col-span-5 max-md:min-w-[90vw] max-md:h-fit max-md:flex  max-md:gap-4 max-sm:flex-col">
 							<img
 								src="/jason-vid-section/Jason_Duval_06.jpg"
 								alt=""
-								className="object-cover max-md:aspect-[9/16] aspect-square flex-1 w-[350px] hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
+								className="object-cover max-md:aspect-[9/16] aspect-square flex-1 w-[350px] hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer max-sm:object-contain max-sm:aspect-auto max-sm:flex-1 max-sm:w-full "
 							/>
 							<img
 								src="/jason-vid-section/Jason_Duval_01.jpg"
 								alt=""
-								className="md:hidden flex-1 aspect-[9/16] object-[80%_center] object-cover w-[350px] hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer"
+								className="md:hidden flex-1 aspect-[9/16] object-[80%_center] object-cover w-[350px] hover:border-4 hover:border-[#fff9cb] transition-all duration-300 hover:cursor-pointer max-sm:object-contain max-sm:aspect-auto max-sm:flex-1 max-sm:w-full max-sm:hidden"
 							/>
 						</div>
 					</div>

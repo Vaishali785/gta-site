@@ -13,13 +13,15 @@
 
 @font-face {
 	font-family: "LS";
-	src: url("/fonts/LandasansMedium-ALJ6m.otf");
+	src: url("/fonts/LandasansMedium-ALJ6m.woff2");
 	font-weight: 500;
+	font-display: swap;
 }
 @font-face {
 	font-family: "LS";
-	src: url("/fonts/LandasansUltraLight-qZ080.otf");
+	src: url("/fonts/LandasansUltraLight-qZ080.woff2");
 	font-weight: 100;
+	font-display: swap;
 }
 
 .LS-medium {
