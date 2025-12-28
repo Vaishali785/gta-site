@@ -20,7 +20,7 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#raulBautistaSection",
 						start: isSmallMobile ? "top 50%" : "top 35%",
-						end: isTab ? "+=1000" : "+=1800",
+						end: isTab ? "+=1000" : isSmallMobile ? "+=1200" : "+=1800",
 						scrub: true,
 						markers: { startColor: "purple", endColor: "purple" },
 					},
