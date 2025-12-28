@@ -8,22 +8,20 @@ This project recreates the _feel_ and _interaction quality_ of Rockstar-style ma
 
 ---
 
-## 🌐 Live Demo
-
-👉 **Live URL**: https://gta6-vaishali.netlify.app/
-
----
-
 ## ✨ Key Features
 
 - 🎬 **GSAP ScrollTrigger animations** (timeline-based, scrubbed, pinned sections)
 - 🧭 **Smooth scrolling** using `@studio-freight/lenis`
 - 📱 **Fully responsive** (mobile, tablet, laptop)
-- 🖼 **Optimized images** using `picture`, `srcset`, and responsive breakpoints
 - 🎥 **Video-heavy sections** with scroll-synced playback
-- 🚀 **Performance-focused** (Lighthouse-friendly, mobile optimized)
 - 🎨 **Custom typography** with optimized `woff2` fonts
 - ⚡ Production-ready deployment (Netlify-compatible)
+
+---
+
+## 🌐 Live Demo
+
+👉 **Live URL**: https://gta6-vaishali.netlify.app/
 
 ---
 
