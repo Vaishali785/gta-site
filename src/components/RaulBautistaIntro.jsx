@@ -175,7 +175,7 @@ const RaulBautistaIntro = () => {
 					scrollTrigger: {
 						trigger: "#raulPics2",
 						start: "top 70%",
-						end: "+=400",
+						end: isSmallMobile ? "+=400" : "+=700",
 						scrub: true,
 						markers: { startColor: "pink", endColor: "pink" },
 					},
