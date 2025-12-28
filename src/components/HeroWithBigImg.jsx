@@ -7,12 +7,13 @@ const HeroWithBigImg = () => {
 		const mm = gsap.matchMedia()
 		mm.add(
 			{
+				isSmallMobile: "(max-width: 550px)",
 				isMobile: "(max-width: 768px)",
 				isTab: "(min-width: 769px) and (max-width: 1023px)",
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
-				let { isMobile, isTab } = context.conditions
+				let { isSmallMobile, isMobile, isTab } = context.conditions
 				const tl = gsap.timeline({
 					scrollTrigger: {
 						trigger: "#hero",
@@ -49,7 +50,13 @@ const HeroWithBigImg = () => {
 							// maskPosition: "47% 41%",
 						},
 						{
-							maskSize: isMobile ? "45%" : isTab ? "18%" : "16%",
+							maskSize: isSmallMobile
+								? "45%"
+								: isMobile
+								? "27%"
+								: isTab
+								? "18%"
+								: "16%",
 							// maskPosition: "50% 12%",
 							// opacity: 0.5,
 							background: "white",
