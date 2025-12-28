@@ -12,7 +12,7 @@ const ClippedImageSection = () => {
 				isLaptop: "(min-width: 1024px)",
 			},
 			(context) => {
-				let { isMobile, isTab, isLaptop } = context.conditions
+				let { isTab } = context.conditions
 				const clippedTimeline = gsap.timeline({
 					scrollTrigger: {
 						trigger: "#clipped-img-section",
